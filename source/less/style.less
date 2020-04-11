@@ -1,9 +1,14 @@
 @import "normalize.less";
+@import "variables.less";
 @import "./blocks/page-header.less";
 @import "./blocks/download.less";
 @import "./blocks/advantages.less";
 @import "./blocks/reviews.less";
 @import "./blocks/page-contacts.less";
+@import "./blocks/page-photo.less";
+@import "./blocks/page-form.less";
+@import "./blocks/button.less";
+@import "./blocks/page-footer.less";
 
 @font-face {
   font-family: "Open Sans";
@@ -51,8 +56,9 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: #283136;
   background-color: #ffffff;
+
+  min-width: 320px;
 }
 
 a {
@@ -60,7 +66,7 @@ a {
 }
 
 .container {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
 }
 

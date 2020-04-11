@@ -17,7 +17,7 @@
         />
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
+        <button class="main-nav__toggle visually-hidden" type="button">
           Открыть меню
         </button>
         <ul class="main-nav__list site-list list">
@@ -42,6 +42,207 @@
         <h1 class="page-form__title">
           Конкурс на самое безбашенное путешествие с Пинк
         </h1>
+        <div class="container">
+          <p class="page-form__text">
+            Поделитесь своей историей и получите шанс выиграть ценный приз —
+            1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+          </p>
+        </div>
+        <form class="appointment">
+          <div class="container">
+            <p class="appointment__item">
+              <label for="appointment__last-name">Фамилия:</label>
+              <input
+                class="last-name-form"
+                type="text"
+                name="last-name"
+                placeholder="Укажите фамилию *"
+                id="appointment__last-name"
+                required
+              />
+            </p>
+            <p class="appointment__item">
+              <label for="appointment__name">Имя:</label>
+              <input
+                class="name-form"
+                type="text"
+                name="name"
+                placeholder="Введите ваше имя *"
+                id="appointment__name"
+                required
+              />
+            </p>
+            <p class="appointment__item">
+              <label for="appointment__last-middle-name">Отчество:</label>
+              <input
+                class="middle-name-form"
+                type="text"
+                name="middle-name"
+                placeholder="Ну и отчество тоже"
+                id="appointment__last-middle-name"
+              />
+            </p>
+          </div>
+          <fieldset class="filter filter__achievement">
+            <div class="container">
+              <legend class="filter__title">
+                Ваши безбашенные достижения в путешествии
+              </legend>
+              <ul class="list">
+                <li class="filter__option">
+                  <input
+                    class="visually-hidden filter__input filter__input-checkbox"
+                    type="checkbox"
+                    name="achievement-filter-selfie"
+                    value="selfie"
+                    id="filter__selfie"
+                    checked
+                  />
+                  <label for="filter__selfie">Сделал селфи с акулой</label>
+                </li>
+                <li class="filter__option">
+                  <input
+                    class="visually-hidden filter__input filter__input-checkbox"
+                    type="checkbox"
+                    name="achievement-filter-beach"
+                    value="beach"
+                    id="filter__beach"
+                    checked
+                  />
+                  <label for="filter__beach">Обгорел на пляже</label>
+                </li>
+                <li class="filter__option">
+                  <input
+                    class="visually-hidden filter__input filter__input-checkbox"
+                    type="checkbox"
+                    name="achievement-filter-norris"
+                    value="norris"
+                    id="filter__norris"
+                  />
+                  <label for="filter__norris">Видел Чака Норриса</label>
+                </li>
+                <li class="filter__option">
+                  <input
+                    class="visually-hidden filter__input filter__input-checkbox"
+                    type="checkbox"
+                    name="achievement-filter-souvenirs"
+                    value="souvenirs"
+                    id="filter__souvenirs"
+                  />
+                  <label for="filter__souvenirs">Накупил сувениров</label>
+                </li>
+                <li class="filter__option">
+                  <input
+                    class="visually-hidden filter__input filter__input-checkbox"
+                    type="checkbox"
+                    name="achievement-filter-tower"
+                    value="tower"
+                    id="filter__tower"
+                    checked
+                  />
+                  <label for="filter__tower">Удержал башню</label>
+                </li>
+                <li class="filter__option">
+                  <input
+                    class="visually-hidden filter__input filter__input-checkbox"
+                    type="checkbox"
+                    name="achievement-filter-destroy"
+                    value="destroy"
+                    id="filter__destroy"
+                  />
+                  <label for="filter__destroy">Разгромил отель</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <div class="container">
+            <div class="feedback__address">
+              <p class="feedback__item">
+                <label for="feedback__tel">Номер телефона</label>
+                <input
+                  class="tel-form"
+                  type="tel"
+                  name="tel"
+                  placeholder="Номер, пожалуйста"
+                  id="feedback__tel"
+                />
+              </p>
+              <p class="feedback__item">
+                <label for="feedback__mail">Адрес почты</label>
+                <input
+                  class="email-form"
+                  type="email"
+                  name="email"
+                  placeholder="Введите почту *"
+                  id="feedback__email"
+                  required
+                />
+              </p>
+            </div>
+          </div>
+
+          <fieldset class="filter filter__app">
+            <div class="container">
+              <legend class="filter__title">
+                С каким приложением путешествовали?
+              </legend>
+              <ul class="list">
+                <li class="filter__option">
+                  <input
+                    class="visually-hidden filter__input filter__input-radio"
+                    type="radio"
+                    name="app-option"
+                    value="app"
+                    id="filter__app-ios"
+                    checked
+                  />
+                  <label for="filter__app-ios">Pink для iOS</label>
+                </li>
+                <li class="filter__option">
+                  <input
+                    class="visually-hidden filter__input filter__input-radio"
+                    type="radio"
+                    name="app-option"
+                    value="android"
+                    id="filter__app-android"
+                  />
+                  <label for="filter__app-android">Pink на Android</label>
+                </li>
+                <li class="filter__option">
+                  <input
+                    class="visually-hidden filter__input filter__input-radio"
+                    type="radio"
+                    name="app-option"
+                    value="windows"
+                    id="filter__app-windows"
+                  />
+                  <label for="filter__app-windows">Windows Phone</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+          <div class="container">
+            <p class="appointment__item appointment__item-text">
+              <label for="appointment__describe">Опишите свои эмоции</label>
+              <textarea
+                class="text-form-form"
+                name="text-form-text"
+                placeholder="Можно прям в красках, не стесняясь в выражениях"
+                id="appointment__describe"
+                rows="6"
+              ></textarea>
+            </p>
+            <div class="button__wrap">
+              <button class="button button__form" type="submit">
+                Отправить форму
+              </button>
+            </div>
+            <p class="form__desc">
+              <sup class="asterisk">*</sup> — обязательные поля
+            </p>
+          </div>
+        </form>
       </section>
     </main>
 
@@ -75,7 +276,7 @@
       <div class="page-footer__copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="#"
-          ><span class="visyally-hidden">HTML Academy</span></a
+          ><span class="visually-hidden">HTML Academy</span></a
         >
       </div>
     </footer>
