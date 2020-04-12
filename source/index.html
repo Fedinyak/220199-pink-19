@@ -17,8 +17,8 @@
         />
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle visually-hidden" type="button">
-          Открыть меню
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list site-list list">
           <li class="site-list__item site-list__item--active">
@@ -39,32 +39,31 @@
 
     <main class="page-main">
       <h1 class="visually-hidden">Приложение «Pink»</h1>
-      <section class="download">
-        <div class="container">
-          <h2 class="visually-hidden">Установка приложения «Pink»</h2>
-          <p class="download__title">Взгляните на жизнь иначе!</p>
-          <a class="button download__button" href="#">
-            Скачать приложение
-          </a>
-          <ul class="download__platform-list list">
-            <li class="download__platform-item">
-              <a href="#"><span class="visually-hidden">Mac OS</span></a>
-            </li>
-            <li class="download__platform-item">
-              <a href="#"><span class="visually-hidden">Android</span></a>
-            </li>
-            <li class="download__platform-item">
-              <a href="#"><span class="visually-hidden">Windows</span></a>
-            </li>
-          </ul>
-          <p class="download__text"></p>
+      <section class="download container">
+        <h2 class="visually-hidden">Установка приложения «Pink»</h2>
+        <p class="download__title">Взгляните на жизнь иначе!</p>
+        <a class="button download__button" href="#">
+          Скачать приложение
+        </a>
+        <ul class="download__platform-list list">
+          <li class="download__platform-item">
+            <a href="#"><span class="visually-hidden">Mac OS</span></a>
+          </li>
+          <li class="download__platform-item">
+            <a href="#"><span class="visually-hidden">Android</span></a>
+          </li>
+          <li class="download__platform-item">
+            <a href="#"><span class="visually-hidden">Windows</span></a>
+          </li>
+        </ul>
+        <p class="download__text">
           Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-        </div>
+        </p>
       </section>
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества приложения «Pink»</h2>
-        <p class="advantages__text">Устали от серости мегаполиса?</p>
-        <p class="advantages__text">Нам есть, что вам предложить!</p>
+        <p class="advantages__text container">Устали от серости мегаполиса?</p>
+        <p class="advantages__text container">Нам есть, что вам предложить!</p>
         <dl class="advantages__list">
           <div class="container">
             <dt class="advantages__list-title">Поднимает настроение</dt>
@@ -85,21 +84,40 @@
           </div>
         </dl>
       </section>
-      <div class="container">
-        <ul class="reviews list">
-          <li class="reviews__list">
-            <h2 class="visually-hidden">Отзывы</h2>
-            <blockquote>
-              <cite class="reviews__name">Николай Петров</cite>
-              <p class="reviews__text">
-                «Это приложение перевернуло мой мир и позволило по-новому
-                взглянуть на привычные серые вещи! А еще я познакомился со своей
-                будущей женой в комментариях к выложенной фотографии!»
-              </p>
-            </blockquote>
-          </li>
-        </ul>
-      </div>
+
+      <h2 class="visually-hidden">Отзывы</h2>
+      <ul class="reviews list">
+        <li class="reviews__list reviews__list-current">
+          <blockquote>
+            <cite class="reviews__name">Николай Петров</cite>
+            <p class="reviews__text">
+              «Это приложение перевернуло мой мир и позволило по-новому
+              взглянуть на привычные серые вещи! А еще я познакомился со своей
+              будущей женой в комментариях к выложенной фотографии!»
+            </p>
+          </blockquote>
+        </li>
+        <li class="reviews__list">
+          <blockquote>
+            <cite class="reviews__name">Николай Петров</cite>
+            <p class="reviews__text">
+              «Это приложение перевернуло мой мир и позволило по-новому
+              взглянуть на привычные серые вещи! А еще я познакомился со своей
+              будущей женой в комментариях к выложенной фотографии!»
+            </p>
+          </blockquote>
+        </li>
+        <li class="reviews__list">
+          <blockquote>
+            <cite class="reviews__name">Николай Петров</cite>
+            <p class="reviews__text">
+              «Это приложение перевернуло мой мир и позволило по-новому
+              взглянуть на привычные серые вещи! А еще я познакомился со своей
+              будущей женой в комментариях к выложенной фотографии!»
+            </p>
+          </blockquote>
+        </li>
+      </ul>
     </main>
 
     <section class="page-contacts">

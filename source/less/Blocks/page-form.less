@@ -9,7 +9,7 @@
   text-align: center;
   font-weight: 300;
   line-height: 28px;
-  color: #ffffff;
+  color: @white;
   background-color: @bg-dark;
 }
 
@@ -48,7 +48,7 @@
   color: @dark-navy;
   border-radius: 4px;
   border: solid 2px @bg-gray;
-  background-color: #ffffff;
+  background-color: @white;
 }
 
 .appointment input::placeholder,
@@ -56,13 +56,13 @@
   color: @dark-navy;
 }
 
-.appointment input:hover,
-.appointment textarea:hover {
+.appointment input:not(:disabled):hover,
+.appointment textarea:not(:disabled):hover {
   border: solid 2px @dark-navy;
 }
 
-.appointment input:focus,
-.appointment textarea:focus {
+.appointment input:not(:disabled):focus,
+.appointment textarea:not(:disabled):focus {
   border: solid 2px @pink;
 }
 
@@ -91,7 +91,7 @@
   cursor: default;
 }
 
-fieldset {
+.filter {
   border: none;
   width: 100%;
 }
@@ -129,9 +129,9 @@ fieldset {
 
   width: 34px;
   height: 34px;
-  background-color: #ffffff;
+  background-color: @white;
 
-  border: 2px solid #e5e5e5;
+  border: 2px solid @disabled-gray;
   border-radius: 50%;
 }
 
@@ -139,8 +139,8 @@ fieldset {
   content: "";
 
   position: absolute;
-  left: -24px;
-  top: 17px;
+  left: -26px;
+  top: 15px;
 
   width: 16px;
   height: 16px;
@@ -159,8 +159,8 @@ fieldset {
   width: 35px;
   height: 35px;
 
-  background-color: #ffffff;
-  border: 2px solid #e5e5e5;
+  background-color: @white;
+  border: 2px solid @disabled-gray;
   border-radius: 2px;
 }
 
@@ -174,8 +174,8 @@ fieldset {
   width: 18px;
   height: 8px;
 
-  border-left: 2px solid #d22856;
-  border-bottom: 2px solid #d22856;
+  border-left: 2px solid @pink;
+  border-bottom: 2px solid @pink;
 
   transform: rotate(-45deg);
 }
@@ -189,14 +189,14 @@ fieldset {
 .filter__input-checkbox:not(:disabled):focus + label::before,
 .filter__input-radio:not(:disabled):hover + label::before,
 .filter__input-radio:not(:disabled):focus + label::before {
-  border: 2px solid #283645;
+  border: 2px solid @dark-navy;
 }
 
 .filter__input-checkbox:not(:disabled):active + label::before,
 .filter__input-checkbox:not(:disabled):active + label::before,
 .filter__input-radio:not(:disabled):active + label::before,
 .filter__input-radio:not(:disabled):active + label::before {
-  border: 2px solid #d22856;
+  border: 2px solid @pink;
 }
 
 .filter__title {
