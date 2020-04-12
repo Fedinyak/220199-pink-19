@@ -96,10 +96,6 @@
   width: 100%;
 }
 
-.appointment__item {
-  display: block;
-}
-
 .filter__achievement {
   background-color: @bg-gray;
 }
@@ -120,7 +116,7 @@
   user-select: none;
 }
 
-.filter__input-radio + label:before {
+.filter__input-radio + label::before {
   content: "";
 
   position: absolute;
@@ -149,7 +145,7 @@
   border-radius: 50%;
 }
 
-.filter__input-checkbox + label:before {
+.filter__input-checkbox + label::before {
   content: "";
 
   position: absolute;
@@ -193,8 +189,6 @@
 }
 
 .filter__input-checkbox:not(:disabled):active + label::before,
-.filter__input-checkbox:not(:disabled):active + label::before,
-.filter__input-radio:not(:disabled):active + label::before,
 .filter__input-radio:not(:disabled):active + label::before {
   border: 2px solid @pink;
 }
