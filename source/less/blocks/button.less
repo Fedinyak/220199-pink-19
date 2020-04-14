@@ -1,0 +1,61 @@
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: inherit;
+  font-weight: 700;
+
+  padding: 17px 40px;
+  line-height: 16px;
+
+  text-align: center;
+  cursor: pointer;
+}
+
+.download__button {
+  display: block;
+  font-size: 19px;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  color: @white;
+  background-color: @transparent;
+  border: 2px solid @white;
+  border-radius: 60px;
+}
+
+.download__button:focus,
+.download__button:hover {
+  color: @pink;
+  background-color: @white;
+}
+
+.download__button:active {
+  color: @pink-opacity;
+  background-color: @white;
+}
+
+.button__form {
+  text-transform: uppercase;
+  width: 280px;
+  height: 63px;
+  font-size: 18px;
+  color: @white;
+  border: none;
+  background-color: @bright-green;
+  border-radius: 4px;
+}
+
+.button__form:focus,
+.button__form:hover {
+  background-color: @dark-green;
+}
+
+.button__form:active {
+  background-color: @dark-green;
+  color: @white-opacity;
+}
+
+.button__form:disabled {
+  background-color: @disabled-gray;
+}

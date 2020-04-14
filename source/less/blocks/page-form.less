@@ -1,0 +1,234 @@
+.page-form {
+  margin-top: 0;
+  color: @dark-navy;
+}
+
+.page-form__title {
+  margin-top: 0;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 300;
+  line-height: 28px;
+  color: @white;
+  background-color: @bg-dark;
+}
+
+.page-form__text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 500;
+  color: @bg-dark;
+}
+
+.appointment {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.appointment input[type="text"],
+.appointment input[type="email"],
+.appointment input[type="tel"],
+.appointment textarea {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 30px;
+
+  padding-top: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 18px;
+
+  width: 280px;
+
+  color: @dark-navy;
+  border-radius: 4px;
+  border: solid 2px @bg-gray;
+  background-color: @white;
+}
+
+.appointment input::placeholder,
+.appointment textarea::placeholder {
+  color: @dark-navy;
+}
+
+.appointment input:not(:disabled):hover,
+.appointment textarea:not(:disabled):hover {
+  border: solid 2px @dark-navy;
+}
+
+.appointment input:not(:disabled):focus,
+.appointment textarea:not(:disabled):focus {
+  border: solid 2px @pink;
+}
+
+.appointment input:invalid,
+.appointment textarea:invalid {
+  border: solid 2px @pink;
+}
+
+.appointment__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feedback__item label,
+.appointment__item label {
+  padding-left: 20px;
+  display: block;
+  color: @pink;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.feedback__item:disabled + label,
+.appointment__item:disabled + label {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.filter {
+  border: none;
+  width: 100%;
+}
+
+.filter__achievement {
+  background-color: @bg-gray;
+}
+
+.filter__option {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 36px;
+}
+
+.filter__option label {
+  position: relative;
+
+  display: block;
+  padding-top: 12px;
+  padding-left: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter__input-radio + label::before {
+  content: "";
+
+  position: absolute;
+  left: -35px;
+  top: 6px;
+
+  width: 34px;
+  height: 34px;
+  background-color: @white;
+
+  border: 2px solid @disabled-gray;
+  border-radius: 50%;
+}
+
+.filter__input-radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+  left: -26px;
+  top: 15px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: @pink;
+  border-radius: 50%;
+}
+
+.filter__input-checkbox + label::before {
+  content: "";
+
+  position: absolute;
+  left: -35px;
+  top: 6px;
+
+  width: 35px;
+  height: 35px;
+
+  background-color: @white;
+  border: 2px solid @disabled-gray;
+  border-radius: 2px;
+}
+
+.filter__input-checkbox:checked + label::after {
+  content: "";
+
+  position: absolute;
+  left: -24px;
+  top: 18px;
+
+  width: 18px;
+  height: 8px;
+
+  border-left: 2px solid @pink;
+  border-bottom: 2px solid @pink;
+
+  transform: rotate(-45deg);
+}
+
+.filter__input:disabled + label {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.filter__input-checkbox:not(:disabled):hover + label::before,
+.filter__input-checkbox:not(:disabled):focus + label::before,
+.filter__input-radio:not(:disabled):hover + label::before,
+.filter__input-radio:not(:disabled):focus + label::before {
+  border: 2px solid @dark-navy;
+}
+
+.filter__input-checkbox:not(:disabled):active + label::before,
+.filter__input-radio:not(:disabled):active + label::before {
+  border: 2px solid @pink;
+}
+
+.filter__title {
+  text-align: center;
+  color: @pink;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.feedback__item label {
+  display: block;
+  color: @pink;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.filter__app {
+  background-color: @bg-gray;
+}
+
+.appointment__item-text label {
+  display: block;
+  text-align: center;
+  color: @pink;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.button__wrap {
+  text-align: center;
+}
+
+.form__desc {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.asterisk {
+  color: @pink;
+}

@@ -1,0 +1,76 @@
+.reviews {
+  text-align: center;
+  position: relative;
+}
+
+.reviews__item {
+  display: none;
+}
+
+.reviews__item blockquote {
+  margin: 0;
+}
+
+.reviews__item-current {
+  display: block;
+}
+
+.reviews__name {
+  font-style: normal;
+  color: @black;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.reviews__text {
+  color: @dark-navy;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.reviews-controls {
+  text-align: center;
+}
+
+.reviews-controls label {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-top: 12px;
+  margin-right: 9px;
+  margin-left: 9px;
+  background-color: @dark-navy;
+  opacity: 0.3;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.reviews-controls:hover label,
+.reviews-controls:focus label {
+  opacity: 0.6;
+}
+
+.reviews-controls:active label {
+  opacity: 0.1;
+}
+
+.reviews-1-radio:checked ~ .reviews__list .reviews__item-1,
+.reviews-2-radio:checked ~ .reviews__list .reviews__item-2,
+.reviews-3-radio:checked ~ .reviews__list .reviews__item-3 {
+  display: block;
+}
+
+.reviews-1-radio:checked ~ .reviews-controls label[for="reviews-1"],
+.reviews-2-radio:checked ~ .reviews-controls label[for="reviews-2"],
+.reviews-3-radio:checked ~ .reviews-controls label[for="reviews-3"] {
+  position: relative;
+  bottom: -3px;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  margin-right: 6px;
+  margin-left: 6px;
+  background-color: @white;
+  border: 3px solid @dark-navy;
+}
