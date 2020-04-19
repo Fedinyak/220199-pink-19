@@ -24,9 +24,9 @@
 }
 
 .appointment {
-  text-align: left;
   display: flex;
   flex-wrap: wrap;
+  text-align: left;
 }
 
 .appointment input[type="text"],
@@ -49,6 +49,39 @@
   border-radius: 4px;
   border: solid 2px @bg-gray;
   background-color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .appointment input[type="text"],
+  .appointment input[type="email"],
+  .appointment input[type="tel"],
+  .appointment textarea {
+    flex-grow: 1;
+    width: 70%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .appointment input[type="text"],
+  .appointment input[type="email"],
+  .appointment input[type="tel"],
+  .appointment textarea {
+    flex-grow: 1;
+    min-width: 300px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .appointment__name-form {
+    order: -3;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .appointment__name-form {
+    width: 50%;
+  }
 }
 
 .appointment input::placeholder,
@@ -76,6 +109,13 @@
   flex-wrap: wrap;
 }
 
+@media (min-width: @tablet-width) {
+  .appointment__item {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .feedback__item label,
 .appointment__item label {
   padding-left: 20px;
@@ -83,6 +123,14 @@
   color: @pink;
   text-transform: uppercase;
   font-size: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__item label,
+  .appointment__item label {
+    padding-left: 0;
+    padding-right: 20px;
+  }
 }
 
 .feedback__item:disabled + label,
@@ -93,11 +141,28 @@
 
 .filter {
   border: none;
-  width: 100%;
 }
 
-.filter__achievement {
-  background-color: @bg-gray;
+@media (min-width: @tablet-width) {
+  .filter {
+    border: 2px solid @disabled-gray;
+    border-radius: 4px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .filter__achievement-form {
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter__achievement {
+    background-color: @transparent;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .filter__option {
@@ -200,6 +265,70 @@
   font-size: 14px;
 }
 
+.appointment__describe-form {
+  width: 100%;
+  flex-grow: 1;
+  padding: 0;
+}
+
+.feedback__address-form {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__address-form {
+    order: -1;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback__address-form-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.feedback__address-title {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__address-title {
+    display: block;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__item {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__item input[type="text"],
+  .feedback__item input[type="email"],
+  .feedback__item input[type="tel"],
+  .feedback__item textarea {
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback__item input[type="text"],
+  .feedback__item input[type="email"],
+  .feedback__item input[type="tel"],
+  .feedback__item textarea {
+    flex-grow: 1;
+    width: 400px;
+  }
+}
+
 .feedback__item label {
   display: block;
   color: @pink;
@@ -207,8 +336,21 @@
   font-size: 14px;
 }
 
-.filter__app {
-  background-color: @bg-gray;
+@media (min-width: @tablet-width) {
+  .filter__app-form {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    order: -2;
+    background-color: @transparent;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter__app-form {
+    flex-grow: 1;
+    width: 40%;
+  }
 }
 
 .appointment__item-text label {
@@ -221,12 +363,30 @@
 
 .button__wrap {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .button__wrap {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .form__desc {
+  display: block;
+  flex-grow: 1;
   text-align: center;
   text-transform: uppercase;
   font-size: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__desc {
+    text-align: right;
+  }
 }
 
 .asterisk {

@@ -7,21 +7,21 @@
   </head>
   <body>
     <header class="page-header container">
-      <a class="page-header__logo" href="index.html">
-        <img
-          class="page-header__logo-image"
-          src="https://via.placeholder.com/150x150"
-          alt="Приложение «PINK»"
-          width="75"
-          height="22"
-        />
-      </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <a class="page-header__logo">
+          <img
+            class="page-header__logo-image"
+            src="https://via.placeholder.com/150x150"
+            alt="Приложение «PINK»"
+            width="75"
+            height="22"
+          />
+        </a>
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list site-list list">
-          <li class="site-list__item ">
+          <li class="site-list__item">
             <a href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
@@ -48,8 +48,8 @@
           миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
         </p>
 
-        <form class="appointment">
-          <div class="container">
+        <form class="appointment container">
+          <div class="appointment__name-form">
             <p class="appointment__item">
               <label for="appointment__last-name">Фамилия:</label>
               <input
@@ -83,12 +83,13 @@
               />
             </p>
           </div>
-          <fieldset class="filter filter__achievement">
-            <div class="container">
-              <legend class="filter__title">
-                Ваши безбашенные достижения в путешествии
-              </legend>
-              <ul class="list">
+
+          <fieldset class="filter filter__achievement-form container--color">
+            <legend class="filter__title container--color">
+              Ваши безбашенные достижения в путешествии
+            </legend>
+            <ul class="filter__achievement list container">
+              <div>
                 <li class="filter__option">
                   <input
                     class="visually-hidden filter__input filter__input-checkbox"
@@ -111,6 +112,8 @@
                   />
                   <label for="filter__beach">Обгорел на пляже</label>
                 </li>
+              </div>
+              <div>
                 <li class="filter__option">
                   <input
                     class="visually-hidden filter__input filter__input-checkbox"
@@ -131,6 +134,8 @@
                   />
                   <label for="filter__souvenirs">Накупил сувениров</label>
                 </li>
+              </div>
+              <div>
                 <li class="filter__option">
                   <input
                     class="visually-hidden filter__input filter__input-checkbox"
@@ -142,6 +147,7 @@
                   />
                   <label for="filter__tower">Удержал башню</label>
                 </li>
+
                 <li class="filter__option">
                   <input
                     class="visually-hidden filter__input filter__input-checkbox"
@@ -152,12 +158,16 @@
                   />
                   <label for="filter__destroy">Разгромил отель</label>
                 </li>
-              </ul>
-            </div>
+              </div>
+            </ul>
           </fieldset>
-          <div class="container">
-            <div class="feedback__address">
-              <p class="feedback__item">
+
+          <fieldset class="feedback__address-form filter">
+            <legend class="feedback__address-title filter__title">
+              Контактная информация
+            </legend>
+            <div class="feedback__address-form-wrap">
+              <div class="feedback__item">
                 <label for="feedback__tel">Номер телефона</label>
                 <input
                   class="tel-form"
@@ -166,8 +176,8 @@
                   placeholder="Номер, пожалуйста"
                   id="feedback__tel"
                 />
-              </p>
-              <p class="feedback__item">
+              </div>
+              <div class="feedback__item">
                 <label for="feedback__mail">Адрес почты</label>
                 <input
                   class="email-form"
@@ -177,54 +187,54 @@
                   id="feedback__email"
                   required
                 />
-              </p>
-            </div>
-          </div>
-
-          <fieldset class="filter filter__app">
-            <div class="container">
-              <legend class="filter__title">
-                С каким приложением путешествовали?
-              </legend>
-              <ul class="list">
-                <li class="filter__option">
-                  <input
-                    class="visually-hidden filter__input filter__input-radio"
-                    type="radio"
-                    name="app-option"
-                    value="app"
-                    id="filter__app-ios"
-                    checked
-                  />
-                  <label for="filter__app-ios">Pink для iOS</label>
-                </li>
-                <li class="filter__option">
-                  <input
-                    class="visually-hidden filter__input filter__input-radio"
-                    type="radio"
-                    name="app-option"
-                    value="android"
-                    id="filter__app-android"
-                  />
-                  <label for="filter__app-android">Pink на Android</label>
-                </li>
-                <li class="filter__option">
-                  <input
-                    class="visually-hidden filter__input filter__input-radio"
-                    type="radio"
-                    name="app-option"
-                    value="windows"
-                    id="filter__app-windows"
-                  />
-                  <label for="filter__app-windows">Windows Phone</label>
-                </li>
-              </ul>
+              </div>
             </div>
           </fieldset>
 
-          <div class="container">
-            <p class="appointment__item appointment__item-text">
+          <fieldset class="filter filter__app-form container--color">
+            <legend class="filter__title container--color">
+              С каким приложением путешествовали?
+            </legend>
+            <ul class="list">
+              <li class="filter__option">
+                <input
+                  class="visually-hidden filter__input filter__input-radio"
+                  type="radio"
+                  name="app-option"
+                  value="app"
+                  id="filter__app-ios"
+                  checked
+                />
+                <label for="filter__app-ios">Pink для iOS</label>
+              </li>
+              <li class="filter__option">
+                <input
+                  class="visually-hidden filter__input filter__input-radio"
+                  type="radio"
+                  name="app-option"
+                  value="android"
+                  id="filter__app-android"
+                />
+                <label for="filter__app-android">Pink на Android</label>
+              </li>
+              <li class="filter__option">
+                <input
+                  class="visually-hidden filter__input filter__input-radio"
+                  type="radio"
+                  name="app-option"
+                  value="windows"
+                  id="filter__app-windows"
+                />
+                <label for="filter__app-windows">Windows Phone</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="filter appointment__describe-form">
+            <legend class="filter__title">
               <label for="appointment__describe">Опишите свои эмоции</label>
+            </legend>
+            <p class="appointment__item appointment__item-text">
               <textarea
                 class="text-form-form"
                 name="text-form-text"
@@ -233,11 +243,11 @@
                 rows="6"
               ></textarea>
             </p>
-            <div class="button__wrap">
-              <button class="button button__form" type="submit">
-                Отправить форму
-              </button>
-            </div>
+          </fieldset>
+          <div class="button__wrap">
+            <button class="button button__form" type="submit">
+              Отправить форму
+            </button>
             <p class="form__desc">
               <sup class="asterisk">*</sup> — обязательные поля
             </p>
@@ -246,7 +256,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer container">
       <a class="page-footer__logo" href="index.html">
         <img
           class="page-footer__logo-image"
@@ -280,5 +290,6 @@
         >
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

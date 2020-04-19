@@ -9,10 +9,8 @@
 
 .reviews__item blockquote {
   margin: 0;
-}
-
-.reviews__item-current {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .reviews__name {
@@ -21,6 +19,25 @@
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__name {
+    display: block;
+    order: 1;
+  }
+}
+
+.reviews__time {
+  display: none;
+  color: @dark-navy;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__time {
+    display: block;
+    order: 1;
+  }
 }
 
 .reviews__text {

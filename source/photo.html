@@ -7,16 +7,16 @@
   </head>
   <body>
     <header class="page-header container">
-      <a class="page-header__logo" href="index.html">
-        <img
-          class="page-header__logo-image"
-          src="https://via.placeholder.com/150x150"
-          alt="Приложение «PINK»"
-          width="75"
-          height="22"
-        />
-      </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <a class="page-header__logo">
+          <img
+            class="page-header__logo-image"
+            src="https://via.placeholder.com/150x150"
+            alt="Приложение «PINK»"
+            width="75"
+            height="22"
+          />
+        </a>
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -24,10 +24,10 @@
           <li class="site-list__item">
             <a href="index.html">Главная</a>
           </li>
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item">
             <a>Фотографии</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--active">
             <a href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
@@ -46,27 +46,26 @@
         </p>
         <div class="container">
           <ul class="page-photo__list list">
-            <li class="page-photo__item">
+            <li class="page-photo__item page-photo__item--daily">
               <article>
                 <img
-                  class="page-photo__img page-photo__img--daily"
+                  class="page-photo__img--daily"
                   src="https://via.placeholder.com/150x150"
                   alt="Фото Анны"
                   width="320"
                   height="137"
                 />
-                <div class="page-photo__wrap">
-                  <blockquote>
-                    <cite class="page-photo__name">Анна</cite>
-                    <p class="page-photo__time">(5 минут назад)</p>
-                    <p class="page-photo__text">
-                      Прыгать или нет? Напишите в комментарии свой совет и
-                      смотрите прямую трансляцию в перископе, задавайте свои
-                      вопросы!
-                    </p>
-                  </blockquote>
+
+                <blockquote class="page-photo__wrap">
+                  <cite class="page-photo__name">Анна</cite>
+                  <p class="page-photo__time">(5 минут назад)</p>
+                  <p class="page-photo__text">
+                    Прыгать или нет? Напишите в комментарии свой совет и
+                    смотрите прямую трансляцию в перископе, задавайте свои
+                    вопросы!
+                  </p>
                   <a class="page-photo__like">Нравится: 215</a>
-                </div>
+                </blockquote>
               </article>
             </li>
             <li class="page-photo__item">
@@ -78,16 +77,15 @@
                   width="280"
                   height="180"
                 />
-                <div class="page-photo__wrap">
-                  <blockquote>
-                    <cite class="page-photo__name">Левон</cite>
-                    <p class="page-photo__time">(5 часов назад)</p>
-                    <p class="page-photo__text">
-                      Вчера он на луну летал, сегодня в руки к нам попал.
-                    </p>
-                  </blockquote>
+
+                <blockquote class="page-photo__wrap">
+                  <cite class="page-photo__name">Левон</cite>
+                  <p class="page-photo__time">(5 часов назад)</p>
+                  <p class="page-photo__text">
+                    Вчера он на луну летал, сегодня в руки к нам попал.
+                  </p>
                   <a class="page-photo__like">Нравится: 356</a>
-                </div>
+                </blockquote>
               </article>
             </li>
             <li class="page-photo__item">
@@ -99,16 +97,15 @@
                   width="280"
                   height="180"
                 />
-                <div class="page-photo__wrap">
-                  <blockquote>
-                    <cite class="page-photo__name">Антон</cite>
-                    <p class="page-photo__time">(12 часов назад)</p>
-                    <p class="page-photo__text">
-                      Соседи будут рады!
-                    </p>
-                  </blockquote>
+
+                <blockquote class="page-photo__wrap">
+                  <cite class="page-photo__name">Антон</cite>
+                  <p class="page-photo__time">(12 часов назад)</p>
+                  <p class="page-photo__text">
+                    Соседи будут рады!
+                  </p>
                   <a class="page-photo__like">Нравится: 666</a>
-                </div>
+                </blockquote>
               </article>
             </li>
             <li class="page-photo__item">
@@ -120,16 +117,14 @@
                   width="280"
                   height="180"
                 />
-                <div class="page-photo__wrap">
-                  <blockquote>
-                    <cite class="page-photo__name">Борис</cite>
-                    <p class="page-photo__time">(20 часов назад)</p>
-                    <p class="page-photo__text">
-                      Здесь могла быть ваша цитата о высоком и вечном.
-                    </p>
-                  </blockquote>
+                <blockquote class="page-photo__wrap">
+                  <cite class="page-photo__name">Борис</cite>
+                  <p class="page-photo__time">(20 часов назад)</p>
+                  <p class="page-photo__text">
+                    Здесь могла быть ваша цитата о высоком и вечном.
+                  </p>
                   <a class="page-photo__like">Нравится: 215</a>
-                </div>
+                </blockquote>
               </article>
             </li>
             <li class="page-photo__item">
@@ -141,16 +136,15 @@
                   width="280"
                   height="180"
                 />
-                <div class="page-photo__wrap">
-                  <blockquote>
-                    <cite class="page-photo__name">Сергей</cite>
-                    <p class="page-photo__time">(25 часов назад)</p>
-                    <p class="page-photo__text">
-                      Самая кубанская в мире!
-                    </p>
-                  </blockquote>
+
+                <blockquote class="page-photo__wrap">
+                  <cite class="page-photo__name">Сергей</cite>
+                  <p class="page-photo__time">(25 часов назад)</p>
+                  <p class="page-photo__text">
+                    Самая кубанская в мире!
+                  </p>
                   <a class="page-photo__like">Нравится: 4</a>
-                </div>
+                </blockquote>
               </article>
             </li>
             <li class="page-photo__item">
@@ -162,16 +156,15 @@
                   width="280"
                   height="180"
                 />
-                <div class="page-photo__wrap">
-                  <blockquote>
-                    <cite class="page-photo__name">Максим</cite>
-                    <p class="page-photo__time">(40 часов назад)</p>
-                    <p class="page-photo__text">
-                      Где снег-то?
-                    </p>
-                  </blockquote>
+
+                <blockquote class="page-photo__wrap">
+                  <cite class="page-photo__name">Максим</cite>
+                  <p class="page-photo__time">(40 часов назад)</p>
+                  <p class="page-photo__text">
+                    Где снег-то?
+                  </p>
                   <a class="page-photo__like">Нравится: 150</a>
-                </div>
+                </blockquote>
               </article>
             </li>
             <li class="page-photo__item">
@@ -183,16 +176,15 @@
                   width="280"
                   height="180"
                 />
-                <div class="page-photo__wrap">
-                  <blockquote>
-                    <cite class="page-photo__name">Надежда</cite>
-                    <p class="page-photo__time">(45 часов назад)</p>
-                    <p class="page-photo__text">
-                      Всем GM и взаимные лайки!
-                    </p>
-                  </blockquote>
+
+                <blockquote class="page-photo__wrap">
+                  <cite class="page-photo__name">Надежда</cite>
+                  <p class="page-photo__time">(45 часов назад)</p>
+                  <p class="page-photo__text">
+                    Всем GM и взаимные лайки!
+                  </p>
                   <a class="page-photo__like">Нравится: 2560</a>
-                </div>
+                </blockquote>
               </article>
             </li>
           </ul>
@@ -200,7 +192,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer container">
       <a class="page-footer__logo" href="index.html">
         <img
           class="page-footer__logo-image"
@@ -234,5 +226,6 @@
         >
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
