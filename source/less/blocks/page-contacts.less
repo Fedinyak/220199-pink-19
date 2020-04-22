@@ -16,11 +16,36 @@
   font-style: normal;
 }
 
+@media (min-width: @tablet-width) {
+  .page-contacts__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    font-style: normal;
+  }
+}
+
 .page-contacts__title {
   color: @black;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+  .page-contacts__call,
+  .page-contacts__write,
+  .page-contacts__address {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-contacts__call,
+  .page-contacts__address {
+    order: -1;
+  }
 }
 
 .page-contacts__text {

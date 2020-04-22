@@ -12,20 +12,118 @@
   background-color: @bg-dark;
 }
 
+.page-photo__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: @tablet-width) {
+  .page-photo__list {
+    justify-content: space-between;
+  }
+}
+
+.page-photo__item {
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .page-photo__item {
+    width: 300px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-photo__item--daily {
+    width: 100%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-photo__item--daily blockquote {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-photo__item--daily .page-photo__name {
+    order: -1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-photo__item--daily .page-photo__time {
+    order: -1;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-photo__item--daily .page-photo__like {
+    display: flex;
+    text-align: right;
+    order: -1;
+  }
+}
+
 .page-photo__img {
   display: block;
+  max-width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .page-photo__img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-photo__img {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+.page-photo__img--daily {
+  display: block;
+  margin-top: 0;
+  padding-top: 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  width: 320px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-photo__img--daily {
+    width: 660px;
+    height: 506px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-photo__img--daily {
+    width: 1200px;
+    height: 506px;
+    margin-left: -130px;
+    margin-right: -130px;
+  }
 }
 
 .page-photo__wrap {
+  display: flex;
+  min-height: 155px;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-right: 0;
   margin-bottom: 20px;
+  margin-left: 0;
+  padding-right: 20px;
+  padding-left: 20px;
   text-align: left;
+
   color: @bg-dark;
   background-color: @bg-gray;
-}
-
-.page-photo__wrap blockquote {
-  margin: 0;
-  padding: 0;
 }
 
 .page-photo__name {
@@ -37,6 +135,9 @@
 }
 
 .page-photo__time {
+  margin-top: 0;
+  margin-left: 10px;
+  margin-bottom: 0;
   font-size: 14px;
   line-height: 24px;
   font-weight: 300;
@@ -48,6 +149,9 @@
   font-size: 12px;
   line-height: 24px;
   font-weight: 500;
+  width: 100%;
+  flex-grow: 1;
+  min-height: 50px;
 }
 
 .page-photo__like {

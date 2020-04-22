@@ -1,8 +1,17 @@
+.download--wrap {
+  background-color: @bg-dark;
+}
+
 .download {
   margin-top: 0;
   color: @white;
   text-align: center;
-  background-color: @bg-dark;
+}
+
+@media (min-width: @tablet-width) {
+  .download {
+    width: 300px;
+  }
 }
 
 .download__title {
