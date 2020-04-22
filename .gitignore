@@ -11,5 +11,4 @@ node_modules/
 npm-debug.*
 source/css/*.css
 source/css/*.map
-source/less/normalize.less
 Thumbs.db
