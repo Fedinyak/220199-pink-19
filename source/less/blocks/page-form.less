@@ -49,23 +49,13 @@
   border-radius: 4px;
   border: solid 2px @bg-gray;
   background-color: @white;
-}
 
-@media (min-width: @tablet-width) {
-  .appointment input[type="text"],
-  .appointment input[type="email"],
-  .appointment input[type="tel"],
-  .appointment textarea {
+  @media (min-width: @tablet-width) {
     flex-grow: 1;
     width: 70%;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .appointment input[type="text"],
-  .appointment input[type="email"],
-  .appointment input[type="tel"],
-  .appointment textarea {
+  @media (min-width: @desktop-width) {
     flex-grow: 1;
     min-width: 300px;
   }
@@ -107,10 +97,8 @@
 .appointment__item {
   display: flex;
   flex-wrap: wrap;
-}
 
-@media (min-width: @tablet-width) {
-  .appointment__item {
+  @media (min-width: @tablet-width) {
     justify-content: space-between;
     align-items: center;
   }
@@ -123,11 +111,8 @@
   color: @pink;
   text-transform: uppercase;
   font-size: 14px;
-}
 
-@media (min-width: @tablet-width) {
-  .feedback__item label,
-  .appointment__item label {
+  @media (min-width: @tablet-width) {
     padding-left: 0;
     padding-right: 20px;
   }
@@ -141,10 +126,8 @@
 
 .filter {
   border: none;
-}
 
-@media (min-width: @tablet-width) {
-  .filter {
+  @media (min-width: @tablet-width) {
     border: 2px solid @disabled-gray;
     border-radius: 4px;
   }
@@ -169,10 +152,8 @@
   margin-top: 20px;
   margin-bottom: 20px;
   padding-left: 36px;
-}
 
-@media (min-width: @desktop-width) {
-  .filter__option {
+  @media (min-width: @desktop-width) {
     margin-top: 20px;
     margin-bottom: 20px;
     padding-left: 36px;
@@ -319,10 +300,8 @@
 .feedback__address-form {
   padding-left: 0;
   margin-left: 0;
-}
 
-@media (min-width: @tablet-width) {
-  .feedback__address-form {
+  @media (min-width: @tablet-width) {
     order: -1;
     width: 100%;
   }
@@ -407,10 +386,8 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-}
 
-@media (min-width: @tablet-width) {
-  .button__wrap {
+  @media (min-width: @tablet-width) {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
@@ -423,10 +400,8 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 14px;
-}
 
-@media (min-width: @tablet-width) {
-  .form__desc {
+  @media (min-width: @tablet-width) {
     text-align: right;
   }
 }
