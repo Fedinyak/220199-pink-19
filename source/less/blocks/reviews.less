@@ -1,6 +1,40 @@
 .reviews {
+  margin-top: 42px;
+  margin-bottom: 40px;
   text-align: center;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 67px;
+    width: 620px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 167px;
+    width: 940px;
+    padding-left: 125px;
+    padding-right: 125px;
+    margin-bottom: 34px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews::before {
+    content: "";
+    position: absolute;
+    top: -95px;
+    left: 435px;
+    width: 79px;
+    height: 63px;
+
+    opacity: 0.1;
+
+    background-image: url("../img/icon-quotes.svg");
+    background-size: 79px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 .reviews__item {
@@ -22,7 +56,13 @@
 
   @media (min-width: @tablet-width) {
     display: block;
+    padding-top: 17px;
+    font-size: 20px;
     order: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
   }
 }
 
@@ -33,6 +73,13 @@
   @media (min-width: @tablet-width) {
     display: block;
     order: 1;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
   }
 }
 
@@ -40,10 +87,24 @@
   color: @dark-navy;
   font-size: 14px;
   line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .reviews-controls {
+  margin-top: 3px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .reviews-controls label {
@@ -57,6 +118,11 @@
   opacity: 0.3;
   border-radius: 50%;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
 }
 
 .reviews-controls:hover label,
@@ -86,4 +152,9 @@
   margin-left: 6px;
   background-color: @white;
   border: 3px solid @dark-navy;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 4px;
+    margin-left: 4px;
+  }
 }
