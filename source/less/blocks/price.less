@@ -1,12 +1,15 @@
 .price {
   background-color: @gray;
   padding-top: 90px;
-  padding-bottom: 124px;
+  padding-bottom: 101px;
   position: relative;
+
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     padding-top: 86px;
     padding-bottom: 70px;
+    overflow: visible;
   }
 
   @media (min-width: @desktop-width) {
@@ -18,14 +21,14 @@
 .price::before {
   content: "";
   position: absolute;
-  width: 320px;
+  width: 100%;
   height: 123px;
-  top: -10px;
+  top: -49px;
   left: 0;
 
   z-index: 1;
   background-image: url("../img/bg-triangle-white.svg");
-  background-size: 320px auto;
+  background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -47,6 +50,16 @@
   color: @dark-navy;
   background-color: @white;
   border-collapse: collapse;
+
+  margin-left: -556px;
+  min-width: 946px;
+
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+    min-width: 600px;
+  }
 }
 
 .price__table-empty {
@@ -58,14 +71,20 @@
   text-transform: uppercase;
   position: relative;
   color: @white;
-  padding-top: 10px;
-  font-weight: 500;
-  width: 154px;
+
+  font-size: 24px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  width: 335px;
   background-color: @dark-navy;
 
   @media (min-width: @tablet-width) {
+    width: 154px;
     font-size: 18px;
     padding-top: 12px;
+    font-weight: 500;
     line-height: 28px;
     padding-bottom: 9px;
   }
@@ -80,6 +99,9 @@
 }
 
 .price__table-head-rate {
+  font-size: 18px;
+  font-weight: 700;
+
   @media (min-width: @tablet-width) {
     font-size: 16px;
     font-weight: 700;
@@ -93,16 +115,26 @@
 
 .price__table-head--hit::before {
   content: "";
-  left: -43px;
-  top: -43px;
+  left: -49px;
+  top: -49px;
   position: absolute;
   transform: rotate(-45deg);
   border: 29px solid @transparent;
   border-bottom: 29px inset @pink;
-  width: 86px;
-  height: 86px;
+  width: 98px;
+  height: 98px;
+
+  @media (min-width: @tablet-width) {
+    left: -43px;
+    top: -43px;
+    border: 29px solid @transparent;
+    border-bottom: 29px inset @pink;
+    width: 86px;
+    height: 86px;
+  }
 
   @media (min-width: @desktop-width) {
+    border-bottom: 29px inset @pink;
     left: -53px;
     top: -53px;
     width: 106px;
@@ -121,6 +153,14 @@
 
   width: 89px;
   height: 89px;
+
+  @media (min-width: @tablet-width) {
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 51px;
+  }
 }
 
 .price__table-head:nth-child(3) {
@@ -129,10 +169,23 @@
 }
 
 .price__table-cell {
+  text-transform: uppercase;
   font-size: 14px;
-  padding: 10px;
-  padding-left: 15px;
+  padding-top: 6px;
+  padding-left: 23px;
+  padding-bottom: 28px;
+
+  min-width: 278px;
+
   border: 2px solid @disabled-gray;
+
+  @media (min-width: @tablet-width) {
+    text-transform: none;
+    min-width: 100px;
+    font-size: 14px;
+    padding: 10px;
+    padding-left: 15px;
+  }
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
@@ -143,6 +196,14 @@
   }
 }
 
+.price__table-check {
+  position: absolute;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .price__check {
   position: relative;
 }
@@ -150,13 +211,18 @@
 .price__check::before {
   content: "";
   position: absolute;
-  top: -13px;
-  left: 48px;
+  top: -2px;
+  left: 206px;
   width: 29px;
   height: 18px;
   border-left: 4px solid @check-green;
   border-bottom: 4px solid @check-green;
   transform: rotate(-45deg);
+
+  @media (min-width: @tablet-width) {
+    top: -13px;
+    left: 48px;
+  }
 
   @media (min-width: @desktop-width) {
     top: -10px;
@@ -172,11 +238,16 @@
 .price__cross::after {
   position: absolute;
   content: "";
-  top: -2px;
-  left: 44px;
+  top: 8px;
+  left: 204px;
   width: 35px;
   height: 4px;
   background-color: @cross-red;
+
+  @media (min-width: @tablet-width) {
+    top: -2px;
+    left: 44px;
+  }
 
   @media (min-width: @desktop-width) {
     top: 1px;
@@ -190,4 +261,52 @@
 
 .price__cross::after {
   transform: rotate(-45deg);
+}
+
+.price__controls {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.price__controls--btn {
+  position: absolute;
+  top: 30px;
+
+  margin-top: 12px;
+
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: @white;
+  border: 3px solid @dark-navy;
+}
+
+.price__controls--btn::before,
+.price__controls--btn::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+
+  background-color: @dark-navy;
+  opacity: 0.3;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.price__controls--btn::before {
+  right: 25px;
+}
+
+.price__controls--btn::after {
+  left: 25px;
 }

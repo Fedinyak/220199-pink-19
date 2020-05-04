@@ -6,15 +6,11 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 67px;
-    width: 620px;
     margin-bottom: 20px;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 167px;
-    width: 940px;
-    padding-left: 125px;
-    padding-right: 125px;
     margin-bottom: 34px;
   }
 }
@@ -24,7 +20,7 @@
     content: "";
     position: absolute;
     top: -95px;
-    left: 435px;
+    left: calc(50% - 40px);
     width: 79px;
     height: 63px;
 
@@ -35,6 +31,52 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+}
+
+.reviews__list--arrows {
+  position: relative;
+}
+
+.reviews__list--arrows-back,
+.reviews__list--arrows-next {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    display: block;
+    top: -161px;
+    width: 30px;
+    height: 30px;
+    background-color: @transparent;
+    border-left: 2px solid @black;
+    border-bottom: 2px solid @black;
+    opacity: 0.3;
+    cursor: pointer;
+  }
+}
+
+.reviews__list--arrows-back {
+  @media (min-width: @desktop-width) {
+    left: 5px;
+    transform: rotate(45deg);
+  }
+}
+
+.reviews__list--arrows-next {
+  @media (min-width: @desktop-width) {
+    left: 903px;
+    transform: rotate(225deg);
+  }
+}
+
+.reviews__list--arrows-back:hover,
+.reviews__list--arrows-back:focus,
+.reviews__list--arrows-next:hover,
+.reviews__list--arrows-next:focus {
+  opacity: 0.6;
+}
+
+.reviews__list--arrows-back:active,
+.reviews__list--arrows-next:active {
+  opacity: 0.1;
 }
 
 .reviews__item {
@@ -91,6 +133,11 @@
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 75px;
+    padding-right: 75px;
   }
 }
 

@@ -19,7 +19,7 @@
   content: "";
   top: 0;
   left: 0;
-  width: 320px;
+  width: 100%;
   height: 237px;
   position: absolute;
   padding-top: 40px;
@@ -27,10 +27,10 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-size: 320px auto;
   background-repeat: no-repeat;
+  background-position: top;
   z-index: -2;
 
   @media (min-width: @tablet-width) {
-    width: 660px;
     height: 440px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-size: 1200px auto;
@@ -38,7 +38,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 1200px;
     height: 394px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-size: 2560px auto;
@@ -469,6 +468,14 @@
   }
 }
 
+@media (max-width: @mobile-width-only) {
+  .filter__title--bg {
+    padding-left: calc(50vw - 160px);
+    padding-right: calc(50vw - 160px);
+    display: block;
+  }
+}
+
 .appointment__describe-form {
   width: 100%;
   flex-grow: 1;
@@ -486,6 +493,7 @@
 }
 
 .feedback__address-form {
+  position: relative;
   padding-top: 10px;
   padding-left: 0;
   padding-bottom: 42px;
@@ -554,13 +562,14 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .icon-tel::after {
+.icon-tel::after {
+  @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
-    left: 312px;
+    top: 62px;
+    left: 494px;
     width: 62px;
-    height: 62px;
+    height: 59px;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     background-color: @disabled-gray;
@@ -568,15 +577,22 @@
     background-position: 20px center;
     background-repeat: no-repeat;
   }
+
+  @media (min-width: @desktop-width) {
+    top: 2px;
+    left: 314px;
+    width: 59px;
+    height: 59px;
+  }
 }
 
-@media (min-width: @desktop-width) {
-  .icon-mail::before {
+.icon-mail::before {
+  @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
-    top: 2px;
-    left: 759px;
-    width: 59px;
+    top: 194px;
+    left: 494px;
+    width: 62px;
     height: 59px;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
@@ -584,6 +600,13 @@
     background-image: url("../img/icon-mail.svg");
     background-position: 20px center;
     background-repeat: no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 2px;
+    left: 759px;
+    width: 59px;
+    height: 59px;
   }
 }
 

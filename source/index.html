@@ -98,13 +98,13 @@
         </div>
       </div>
       <div class="container">
-        <section class="advantages">
+        <section class="advantages container--color-wrap">
           <h2 class="visually-hidden">Преимущества приложения «Pink»</h2>
           <p class="advantages__text">
             Устали от серости мегаполиса?
           </p>
           <p class="advantages__text">Нам есть, что вам<br />предложить!</p>
-          <dl class="advantages__list">
+          <dl class="advantages__list container--color-wrap">
             <div class="advantages__list--wrap">
               <dt class="advantages__list-title advantages__list-title--fun">
                 Поднимает настроение
@@ -151,7 +151,7 @@
       </section>
 
       <section class="container">
-        <div class="reviews">
+        <div class="reviews container--color-wrap">
           <h2 class="visually-hidden">Отзывы</h2>
           <input
             class="visually-hidden reviews-1-radio"
@@ -214,6 +214,15 @@
               </blockquote>
             </li>
           </ul>
+          <div class="reviews__list--arrows">
+            <a class="reviews__list--arrows-back"
+              ><p class="visually-hidden">Предыдущий отзыв</p></a
+            >
+            <a class="reviews__list--arrows-next"
+              ><p class="visually-hidden">Следующий отзыв</p></a
+            >
+          </div>
+
           <div class="reviews-controls">
             <label for="reviews-1"
               ><span class="visually-hidden">Первый отзыв</span></label
@@ -255,8 +264,11 @@
               </td>
               <td class="price__table-cell">
                 <span class="price__check"
-                  ><p class="visually-hidden">Галочка</p></span
+                  ><p class="visually-hidden">
+                    Галочка
+                  </p></span
                 >
+                <span class="price__table-check">Розовый фильтр</span>
               </td>
               <td class="price__table-cell">
                 <span class="price__check"
@@ -273,8 +285,9 @@
               </td>
               <td class="price__table-cell">
                 <span class="price__check"
-                  ><p class="visually-hidden">Галочка</p></span
-                >
+                  ><p class="visually-hidden">Галочка</p>
+                </span>
+                <span class="price__table-check">Смайлики</span>
               </td>
               <td class="price__table-cell">
                 <span class="price__check"
@@ -291,8 +304,9 @@
               </td>
               <td class="price__table-cell">
                 <span class="price__cross">
-                  <p class="visually-hidden">Крестик</p></span
-                >
+                  <p class="visually-hidden">Крестик</p>
+                </span>
+                <span class="price__table-check">Комментарии</span>
               </td>
               <td class="price__table-cell">
                 <span class="price__check"
@@ -301,6 +315,10 @@
               </td>
             </tr>
           </table>
+
+          <div class="price__controls">
+            <div class="price__controls--btn"></div>
+          </div>
         </div>
       </section>
     </main>
@@ -320,7 +338,9 @@
           </div>
           <div class="page-contacts__write">
             <p class="page-contacts__title">Пишите:</p>
-            <a class="page-contacts__text" href="mailto:mail@htmlacademy.ru"
+            <a
+              class="page-contacts__text page-contacts__mail"
+              href="mailto:mail@htmlacademy.ru"
               >mail@htmlacademy.ru</a
             >
           </div>
@@ -328,6 +348,7 @@
             <p class="page-contacts__title">Приезжайте в гости:</p>
             <p class="page-contacts__text">ул. Большая Конюшенная, 19/8</p>
           </div>
+          <div class="page-contacts__marker"></div>
         </address>
       </div>
     </section>

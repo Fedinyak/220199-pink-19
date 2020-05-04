@@ -38,22 +38,22 @@
   position: relative;
   background-color: @bg-gray;
   margin-top: 30px;
-  margin-left: -20px;
-  margin-right: -20px;
-  margin-bottom: 30px;
   padding-top: 51px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-bottom: 317px;
-  width: 320px;
+  // margin-left: -20px;
+  // margin-right: -20px;
+  // margin-bottom: 30px;
+  // padding-left: 20px;
+  // padding-right: 20px;
+  // width: 320px;
 
   @media (min-width: @tablet-width) {
     text-align: left;
     margin-top: 46px;
     padding-top: 46px;
-    padding-left: 330px;
+    padding-left: 346px;
     padding-bottom: 38px;
-    width: 660px;
+    //width: 660px;
   }
 
   @media (min-width: @desktop-width) {
@@ -75,22 +75,19 @@
 .advantages__list::before {
   content: "";
   position: absolute;
-  width: 319px;
+  width: 100%;
   height: 123px;
-  top: -49px;
+  top: -54px;
   left: 0;
-
   z-index: 1;
   background-image: url("../img/bg-triangle-white.svg");
-  background-size: 320px auto;
-  background-position: center;
+  background-size: 100% 140px;
+  background-position: top;
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    width: 660px;
-    top: -36px;
-
-    background-size: 660px auto;
+    top: -1px;
+    background-size: 100% auto;
   }
 
   @media (min-width: @desktop-width) {

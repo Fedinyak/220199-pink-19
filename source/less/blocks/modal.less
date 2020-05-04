@@ -1,0 +1,105 @@
+.modal {
+  text-align: center;
+  background-color: @white;
+
+  padding-left: calc(50vw - 140px);
+  padding-right: calc(50vw - 140px);
+  padding-bottom: 50px;
+  width: 100vw;
+  box-shadow: 0 7px 15px 0 @border-shadow-dark;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+    margin-left: calc(50% - 230px);
+    border-radius: 4px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 780px;
+    margin-left: calc(50% - 390px);
+    padding-left: 190px;
+    padding-right: 190px;
+    padding-bottom: 0;
+  }
+}
+
+.modal__title {
+  padding-top: 40px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 37px;
+    margin-bottom: 21px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 41px;
+  }
+}
+
+.modal__text {
+  padding-top: 7px;
+  padding-bottom: 24px;
+  font-size: 14px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 20px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 45px;
+  }
+}
+
+.modal__accept .modal__text {
+  padding-bottom: 16px;
+}
+
+.modal__accept .modal__button--wrap {
+  padding-top: 50px;
+  padding-bottom: 55px;
+  margin-left: calc((50vw - 140px) * -1);
+  margin-right: calc((50vw - 140px) * -1);
+  padding-left: calc(50vw - 140px);
+  padding-right: calc(50vw - 140px);
+  width: 100vw;
+  background-color: @bg-gray;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+    margin-left: -70px;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+.modal__accept .modal__button--wrap,
+.modal__button--wrap {
+  @media (min-width: @desktop-width) {
+    width: 780px;
+    padding-top: 50px;
+    margin-left: -190px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 55px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    background-color: @bg-gray;
+  }
+}
+
+.modal__accept {
+  margin-top: 140px;
+  padding-bottom: 0;
+}

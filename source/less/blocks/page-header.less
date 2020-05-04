@@ -17,17 +17,27 @@
 .page-header-bg {
   background-color: @dark-navy;
   margin-top: -20px;
-  margin-left: -20px;
-  margin-right: -20px;
+  // margin-left: -20px;
+  //margin-right: -20px;
   padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  // padding-left: 20px;
+  // padding-right: 20px;
   margin-bottom: -16px;
-  width: 320px;
+  // width: 320px;
+  margin-left: calc((50vw - 140px) * -1);
+  margin-right: calc((50vw - 140px) * -1);
+  padding-left: calc(50vw - 140px);
+  padding-right: calc(50vw - 140px);
+  width: 100vw;
 
   @media (min-width: @tablet-width) {
-    width: 660px;
+    // width: 660px;
     margin-bottom: -37px;
+
+    margin-left: calc((50vw - 310px) * -1);
+    margin-right: calc((50vw - 310px) * -1);
+    padding-left: calc(50vw - 310px);
+    padding-right: calc(50vw - 310px);
   }
 }
 
@@ -197,4 +207,29 @@
 .site-list__item a {
   color: @white;
   display: block;
+}
+
+.site-list__item:not(.site-list__item--active) a:hover,
+.site-list__item:not(.site-list__item--active) a:focus {
+  color: @pink;
+}
+
+.site-list__item:not(.site-list__item--active) a:active {
+  color: @white-opacity;
+}
+
+.site-list__item--active {
+  position: relative;
+}
+
+.site-list__item--active::after {
+  @media (min-width: @desktop-width) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 7px;
+    height: 2px;
+    background-color: @white;
+  }
 }
