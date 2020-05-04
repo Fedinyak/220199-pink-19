@@ -12,12 +12,18 @@
     background-color: @bg-gray;
     margin-top: 0;
     padding-top: 124px;
-    margin-left: -130px;
-    margin-right: -130px;
-    padding-left: 496px;
-    padding-right: 130px;
+    // margin-left: -130px;
+    // margin-right: -130px;
+    // padding-left: 496px;
+    // padding-right: 130px;
+    // width: 1200px;
     padding-bottom: 114px;
-    width: 1200px;
+
+    margin-left: calc((50vw - 470px) * -1);
+    margin-right: calc((50vw - 470px) * -1);
+    padding-left: calc(50vw - 470px);
+    padding-right: calc(50vw - 470px);
+    width: 100vw;
   }
 }
 
@@ -32,6 +38,7 @@
   @media (min-width: @desktop-width) {
     margin-top: 0;
     width: 530px;
+    margin-left: 365px;
   }
 }
 
@@ -100,6 +107,7 @@
     line-height: 30px;
     margin-top: 21px;
     margin-bottom: 30px;
+    margin-left: 365px;
   }
 }
 
@@ -113,5 +121,6 @@
     width: 530px;
     font-size: 18px;
     line-height: 30px;
+    margin-left: 365px;
   }
 }
