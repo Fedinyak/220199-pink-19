@@ -1,6 +1,9 @@
 .modal {
+  display: none;
   text-align: center;
   background-color: @white;
+  position: fixed;
+  top: calc(100vh - 85%);
 
   padding-left: calc(50vw - 140px);
   padding-right: calc(50vw - 140px);
@@ -65,8 +68,8 @@
 .modal__accept .modal__button--wrap {
   padding-top: 50px;
   padding-bottom: 55px;
-  margin-left: calc((50vw - 140px) * -1);
-  margin-right: calc((50vw - 140px) * -1);
+  margin-left: calc(140px - 50vw);
+  margin-right: calc(140px - 50vw);
   padding-left: calc(50vw - 140px);
   padding-right: calc(50vw - 140px);
   width: 100vw;
@@ -100,6 +103,13 @@
 }
 
 .modal__accept {
-  margin-top: 140px;
   padding-bottom: 0;
+}
+
+.modal__error--visible {
+  display: block;
+}
+
+.modal__accept--visible {
+  display: block;
 }

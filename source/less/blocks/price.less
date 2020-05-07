@@ -1,7 +1,7 @@
 .price {
   background-color: @gray;
   padding-top: 90px;
-  padding-bottom: 101px;
+  padding-bottom: 47px;
   position: relative;
 
   overflow: hidden;
@@ -267,6 +267,8 @@
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: 42px;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -274,39 +276,25 @@
 }
 
 .price__controls--btn {
-  position: absolute;
-  top: 30px;
-
-  margin-top: 12px;
-
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  border-radius: 50%;
-  cursor: pointer;
-
-  background-color: @white;
-  border: 3px solid @dark-navy;
-}
-
-.price__controls--btn::before,
-.price__controls--btn::after {
-  content: "";
-  position: absolute;
-  display: inline-block;
+  padding: 0;
+  margin-left: 8px;
+  margin-right: 8px;
   width: 6px;
   height: 6px;
 
   background-color: @dark-navy;
   opacity: 0.3;
+  border: none;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.price__controls--btn::before {
-  right: 25px;
-}
+.price__controls--btn-active {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  border-radius: 50%;
 
-.price__controls--btn::after {
-  left: 25px;
+  background-color: @white;
+  border: 3px solid @dark-navy;
 }

@@ -28,9 +28,11 @@
               />
             </picture>
           </a>
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+          <div class="main-nav__toggle-wrap">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+          </div>
           <ul class="main-nav__list site-list list">
             <li class="site-list__item site-list__item--active">
               <a>Главная</a>
@@ -42,7 +44,9 @@
               <a href="form.html">Конкурс</a>
             </li>
             <li class="site-list__item">
-              <a href="html-academy.html">HTML Academy</a>
+              <a href="https://htmlacademy.ru/intensive/adaptive"
+                >HTML Academy</a
+              >
             </li>
           </ul>
         </nav>
@@ -317,7 +321,15 @@
           </table>
 
           <div class="price__controls">
-            <div class="price__controls--btn"></div>
+            <button class="price__controls--btn">
+              <span class="visually-hidden">Тариф база</span>
+            </button>
+            <button class="price__controls--btn price__controls--btn-active">
+              <span class="visually-hidden">Тариф стандарт</span>
+            </button>
+            <button class="price__controls--btn">
+              <span class="visually-hidden">Тариф анлим</span>
+            </button>
           </div>
         </div>
       </section>
@@ -447,7 +459,9 @@
         </ul>
         <div class="page-footer__copyright">
           <p class="copyright__text">Разработано</p>
-          <a class="copyright__link" href="#"
+          <a
+            class="copyright__link"
+            href="https://htmlacademy.ru/intensive/adaptive"
             ><span class="visually-hidden">HTML Academy</span>
             <svg
               version="1.0"
