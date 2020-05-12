@@ -30,6 +30,16 @@
 
 .copyright__link svg {
   display: block;
+  fill: @pink;
+}
+
+.copyright__link:hover svg,
+.copyright__link:focus svg {
+  fill: @dark-navy;
+}
+
+.copyright__link:active svg {
+  opacity: 0.3;
 }
 
 .social {
@@ -50,6 +60,19 @@
     width: 170px;
     text-align: left;
   }
+}
+
+.page-footer__logo svg {
+  fill: @dark-navy;
+}
+
+.page-footer__logo:hover svg {
+  fill: @pink;
+}
+
+.page-footer__logo:active svg {
+  fill: @dark-navy;
+  opacity: 0.3;
 }
 
 .social__item {
