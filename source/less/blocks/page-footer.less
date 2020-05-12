@@ -63,16 +63,30 @@
 }
 
 .page-footer__logo svg {
-  fill: @dark-navy;
+  color: @dark-navy;
 }
 
 .page-footer__logo:hover svg {
-  fill: @pink;
+  color: @pink;
 }
 
 .page-footer__logo:active svg {
-  fill: @dark-navy;
+  color: @dark-navy;
   opacity: 0.3;
+}
+
+.page-footer__logo-mobile {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-footer__logo-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
 }
 
 .social__item {
