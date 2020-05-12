@@ -43,16 +43,32 @@
 }
 
 .page-header__logo {
-  min-width: 200px;
   margin-top: 10px;
+  min-width: 200px;
+  height: 30px;
 
   @media (min-width: @tablet-width) {
+    min-height: 30px;
     min-width: 500px;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 100px;
   }
+}
+
+.page-header__logo svg {
+  fill: @white;
+}
+
+.page-header__logo:hover svg,
+.page-header__logo:focus svg {
+  fill: @pink;
+}
+
+.page-header__logo:active svg {
+  fill: @white;
+  opacity: 0.3;
 }
 
 .main-nav {
