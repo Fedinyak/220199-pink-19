@@ -5,7 +5,7 @@
     <title>Пинк главная страница</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
     <header class="page-header container">
@@ -58,33 +58,28 @@
           <ul class="download__platform-list list">
             <li class="download__platform-item">
               <a href="#"
-                ><span class="visually-hidden">Mac OS</span
-                ><img
-                  src="img/logo-apple.svg"
-                  width="47"
-                  height="56"
-                  alt="Mac OS"
-              /></a>
+                ><span class="visually-hidden">Mac OS</span>
+                <svg width="47" height="56">
+                  <use xlink:href="img/sprite.svg#logo-apple"></use>
+                </svg>
+              </a>
             </li>
             <li class="download__platform-item">
               <a href="#"
-                ><span class="visually-hidden">Android</span
-                ><img
-                  src="img/logo-android.svg"
-                  width="43"
-                  height="47"
-                  alt="Android"
-              /></a>
+                ><span class="visually-hidden">Android</span>
+                <svg width="43" height="47">
+                  <use xlink:href="img/sprite.svg#logo-android"></use>
+                </svg>
+              </a>
             </li>
             <li class="download__platform-item">
               <a href="#"
-                ><span class="visually-hidden">Windows</span
-                ><img
-                  src="img/logo-microsoft.svg"
-                  width="44"
-                  height="41"
-                  alt="Windows"
-              /></a>
+                ><span class="visually-hidden">Windows</span>
+
+                <svg width="44" height="41">
+                  <use xlink:href="img/sprite.svg#logo-microsoft"></use>
+                </svg>
+              </a>
             </li>
           </ul>
           <p class="download__text">
