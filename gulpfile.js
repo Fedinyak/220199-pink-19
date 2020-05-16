@@ -14,6 +14,7 @@ var webp = require("gulp-webp");
 var del = require("del");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var minify = require("gulp-minifier");
 
 gulp.task("clean", function() {
   return del("build");
@@ -25,7 +26,7 @@ gulp.task("copy", function() {
       [
         "source/fonts/**/*.{woff,woff2}",
         "source/img/sprite.svg",
-        "source/js/**",
+        //"source/js/**",
         "source/*.ico"
       ],
       {
@@ -49,11 +50,40 @@ gulp.task("css", function() {
     .pipe(server.stream());
 });
 
+gulp.task("min-js", function() {
+  return gulp
+    .src("source/js/*.js")
+    .pipe(
+      minify({
+        minify: true,
+        minifyJS: {
+          sourceMap: true
+        }
+      })
+    )
+    .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("html", function() {
   return gulp
     .src("source/*.html")
     .pipe(posthtml([include()]))
     .pipe(gulp.dest("build"));
+});
+
+gulp.task("min-html", function() {
+  return gulp
+    .src("build/*.html")
+    .pipe(
+      minify({
+        minify: true,
+        minifyHTML: {
+          collapseWhitespace: true,
+          conservativeCollapse: true
+        }
+      })
+    )
+    .pipe(gulp.dest("build/"));
 });
 
 gulp.task("images", function() {
@@ -102,7 +132,17 @@ gulp.task("refresh", function(done) {
 
 gulp.task(
   "build",
-  gulp.series("clean", "copy", "css", "images", "svg", "webp", "html")
+  gulp.series(
+    "clean",
+    "copy",
+    "css",
+    "images",
+    "svg",
+    "webp",
+    "min-js",
+    "html",
+    "min-html"
+  )
 );
 
 gulp.task("start", gulp.series("build", "server"));
