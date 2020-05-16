@@ -5,13 +5,17 @@
     <title>Фотографии сделанные с помощью приложения Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="page-header container">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <a class="page-header__logo" href="index.html">
-          <!--<picture>
+          <!-- <picture>
             <source
               media="(min-width: 1200px)"
               srcset="img/logo-pink-white-desktop.svg"
@@ -25,11 +29,26 @@
               src="img/logo-pink-white-mobile.svg"
               alt="Приложение «PINK»"
             />
-          </picture>-->
-          <svg
+          </picture> -->
+
+          <svg width="146" height="42">
+            <use
+              class="page-header__logo-desktop"
+              xlink:href="#header-logo-pink-white-desktop"
+            ></use>
+            <use
+              class="page-header__logo-tablet"
+              xlink:href="#header-logo-pink-white-tablet"
+            ></use>
+            <use
+              class="page-header__logo-mobile"
+              xlink:href="#header-logo-pink-white-mobile"
+            ></use>
+          </svg>
+          <!-- <svg
             class="page-header__logo-image"
-            width="146.3px"
-            height="40.375px"
+            width="146.3"
+            height="40.375"
             viewBox="0 0 146.3 40.375"
           >
             <style>
@@ -154,7 +173,7 @@
                 d="M56.3,1.288C56.3,0.58,56.879,0,57.556,0c0.708,0,1.287,0.58,1.287,1.288v12.331L71.689,0.451 C71.979,0.193,72.269,0,72.688,0c0.676,0,1.224,0.612,1.224,1.256c0,0.354-0.161,0.644-0.419,0.901l-7.984,7.92l8.564,10.561 c0.225,0.29,0.354,0.547,0.354,0.934c0,0.676-0.579,1.288-1.287,1.288c-0.483,0-0.806-0.258-1.03-0.58l-8.403-10.463l-4.862,4.861 v4.894c0,0.708-0.579,1.288-1.287,1.288c-0.677,0-1.256-0.58-1.256-1.288V1.288z"
               />
             </g>
-          </svg>
+          </svg> -->
         </a>
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -190,55 +209,57 @@
           <ul class="page-photo__list list">
             <li class="page-photo__item page-photo__item--daily">
               <article>
-                <picture>
-                  <source
-                    type="image/webp"
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/panorama-desktop@1x.webp 1x,
-                      img/panorama-desktop@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    media="(min-width: 660px)"
-                    srcset="
-                      img/panorama-tablet@1x.webp 1x,
-                      img/panorama-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    srcset="
-                      img/panorama-mobile@1x.webp 1x,
-                      img/panorama-mobile@2x.webp 2x
-                    "
-                  />
+                <a href="img/panorama-full.jpg">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/panorama-desktop@1x.webp 1x,
+                        img/panorama-desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 660px)"
+                      srcset="
+                        img/panorama-tablet@1x.webp 1x,
+                        img/panorama-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/panorama-mobile@1x.webp 1x,
+                        img/panorama-mobile@2x.webp 2x
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/panorama-desktop@1x.jpg 1x,
-                      img/panorama-desktop@2x.jpg 2x
-                    "
-                  />
-                  <source
-                    media="(min-width: 660px)"
-                    srcset="
-                      img/panorama-tablet@1x.jpg 1x,
-                      img/panorama-tablet@2x.jpg 2x
-                    "
-                  />
-                  <img
-                    class="page-photo__img--daily"
-                    src="img/panorama-mobile@1x.jpg"
-                    srcset="
-                      img/panorama-mobile@1x.jpg 1x,
-                      img/panorama-mobile@2x.jpg 2x
-                    "
-                    alt="Фото Анны"
-                  />
-                </picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/panorama-desktop@1x.jpg 1x,
+                        img/panorama-desktop@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 660px)"
+                      srcset="
+                        img/panorama-tablet@1x.jpg 1x,
+                        img/panorama-tablet@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="page-photo__img--daily"
+                      src="img/panorama-mobile@1x.jpg"
+                      srcset="
+                        img/panorama-mobile@1x.jpg 1x,
+                        img/panorama-mobile@2x.jpg 2x
+                      "
+                      alt="Фото Анны"
+                    />
+                  </picture>
+                </a>
 
                 <blockquote class="page-photo__wrap">
                   <cite class="page-photo__name">Анна</cite>
@@ -254,55 +275,57 @@
             </li>
             <li class="page-photo__item">
               <article>
-                <picture>
-                  <source
-                    type="image/webp"
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/photo-car-desktop@1x.webp 1x,
-                      img/photo-car-desktop@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    media="(min-width: 660px)"
-                    srcset="
-                      img/photo-car-tablet@1x.webp 1x,
-                      img/photo-car-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    srcset="
-                      img/photo-car-mobile@1x.webp 1x,
-                      img/photo-car-mobile@2x.webp 2x
-                    "
-                  />
+                <a href="img/car-full.jpg">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo-car-desktop@1x.webp 1x,
+                        img/photo-car-desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 660px)"
+                      srcset="
+                        img/photo-car-tablet@1x.webp 1x,
+                        img/photo-car-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/photo-car-mobile@1x.webp 1x,
+                        img/photo-car-mobile@2x.webp 2x
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/photo-car-desktop@1x.jpg 1x,
-                      img/photo-car-desktop@2x.jpg 2x
-                    "
-                  />
-                  <source
-                    media="(min-width: 660px)"
-                    srcset="
-                      img/photo-car-tablet@1x.jpg 1x,
-                      img/photo-car-tablet@2x.jpg 2x
-                    "
-                  />
-                  <img
-                    class="page-photo__img"
-                    src="img/photo-car-mobile@1x.jpg"
-                    srcset="
-                      img/photo-car-mobile@1x.jpg 1x,
-                      img/photo-car-mobile@2x.jpg 2x
-                    "
-                    alt="Фото Левона"
-                  />
-                </picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo-car-desktop@1x.jpg 1x,
+                        img/photo-car-desktop@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 660px)"
+                      srcset="
+                        img/photo-car-tablet@1x.jpg 1x,
+                        img/photo-car-tablet@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="page-photo__img"
+                      src="img/photo-car-mobile@1x.jpg"
+                      srcset="
+                        img/photo-car-mobile@1x.jpg 1x,
+                        img/photo-car-mobile@2x.jpg 2x
+                      "
+                      alt="Фото Левона"
+                    />
+                  </picture>
+                </a>
                 <blockquote class="page-photo__wrap">
                   <cite class="page-photo__name">Левон</cite>
                   <p class="page-photo__time">(5 часов назад)</p>
@@ -315,55 +338,57 @@
             </li>
             <li class="page-photo__item">
               <article>
-                <picture>
-                  <source
-                    type="image/webp"
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/photo-drumset-desktop@1x.webp 1x,
-                      img/photo-drumset-desktop@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    media="(min-width: 660px)"
-                    srcset="
-                      img/photo-drumset-tablet@1x.webp 1x,
-                      img/photo-drumset-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    srcset="
-                      img/photo-drumset-mobile@1x.webp 1x,
-                      img/photo-drumset-mobile@2x.webp 2x
-                    "
-                  />
+                <a href="img/drumset-full.jpg">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo-drumset-desktop@1x.webp 1x,
+                        img/photo-drumset-desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 660px)"
+                      srcset="
+                        img/photo-drumset-tablet@1x.webp 1x,
+                        img/photo-drumset-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/photo-drumset-mobile@1x.webp 1x,
+                        img/photo-drumset-mobile@2x.webp 2x
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/photo-drumset-desktop@1x.jpg 1x,
-                      img/photo-drumset-desktop@2x.jpg 2x
-                    "
-                  />
-                  <source
-                    media="(min-width: 660px)"
-                    srcset="
-                      img/photo-drumset-tablet@1x.jpg 1x,
-                      img/photo-drumset-tablet@2x.jpg 2x
-                    "
-                  />
-                  <img
-                    class="page-photo__img"
-                    src="img/photo-drumset-mobile@1x.jpg"
-                    srcset="
-                      img/photo-drumset-mobile@1x.jpg 1x,
-                      img/photo-drumset-mobile@2x.jpg 2x
-                    "
-                    alt="Фото Антона"
-                  />
-                </picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo-drumset-desktop@1x.jpg 1x,
+                        img/photo-drumset-desktop@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 660px)"
+                      srcset="
+                        img/photo-drumset-tablet@1x.jpg 1x,
+                        img/photo-drumset-tablet@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="page-photo__img"
+                      src="img/photo-drumset-mobile@1x.jpg"
+                      srcset="
+                        img/photo-drumset-mobile@1x.jpg 1x,
+                        img/photo-drumset-mobile@2x.jpg 2x
+                      "
+                      alt="Фото Антона"
+                    />
+                  </picture>
+                </a>
 
                 <blockquote class="page-photo__wrap">
                   <cite class="page-photo__name">Антон</cite>
@@ -377,55 +402,57 @@
             </li>
             <li class="page-photo__item">
               <article>
-                <picture>
-                  <source
-                    type="image/webp"
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/photo-window-desktop@1x.webp 1x,
-                      img/photo-window-desktop@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    media="(min-width: 768px)"
-                    srcset="
-                      img/photo-window-tablet@1x.webp 1x,
-                      img/photo-window-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    srcset="
-                      img/photo-window-mobile@1x.webp 1x,
-                      img/photo-window-mobile@2x.webp 2x
-                    "
-                  />
+                <a href="img/window-full.jpg">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo-window-desktop@1x.webp 1x,
+                        img/photo-window-desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/photo-window-tablet@1x.webp 1x,
+                        img/photo-window-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/photo-window-mobile@1x.webp 1x,
+                        img/photo-window-mobile@2x.webp 2x
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/photo-window-desktop@1x.jpg 1x,
-                      img/photo-window-desktop@2x.jpg 2x
-                    "
-                  />
-                  <source
-                    media="(min-width: 660px)"
-                    srcset="
-                      img/photo-window-tablet@1x.jpg 1x,
-                      img/photo-window-tablet@2x.jpg 2x
-                    "
-                  />
-                  <img
-                    class="page-photo__img"
-                    src="img/photo-window-mobile@1x.jpg"
-                    srcset="
-                      img/photo-window-mobile@1x.jpg 1x,
-                      img/photo-window-mobile@2x.jpg 2x
-                    "
-                    alt="Фото Бориса"
-                  />
-                </picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo-window-desktop@1x.jpg 1x,
+                        img/photo-window-desktop@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 660px)"
+                      srcset="
+                        img/photo-window-tablet@1x.jpg 1x,
+                        img/photo-window-tablet@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="page-photo__img"
+                      src="img/photo-window-mobile@1x.jpg"
+                      srcset="
+                        img/photo-window-mobile@1x.jpg 1x,
+                        img/photo-window-mobile@2x.jpg 2x
+                      "
+                      alt="Фото Бориса"
+                    />
+                  </picture>
+                </a>
 
                 <blockquote class="page-photo__wrap">
                   <cite class="page-photo__name">Борис</cite>
@@ -439,55 +466,57 @@
             </li>
             <li class="page-photo__item">
               <article>
-                <picture>
-                  <source
-                    type="image/webp"
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/photo-fair-desktop@1x.webp 1x,
-                      img/photo-fair-desktop@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    media="(min-width: 660px)"
-                    srcset="
-                      img/photo-fair-tablet@1x.webp 1x,
-                      img/photo-fair-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    srcset="
-                      img/photo-fair-mobile@1x.webp 1x,
-                      img/photo-fair-mobile@2x.webp 2x
-                    "
-                  />
+                <a href="img/fair-full.jpg">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo-fair-desktop@1x.webp 1x,
+                        img/photo-fair-desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 660px)"
+                      srcset="
+                        img/photo-fair-tablet@1x.webp 1x,
+                        img/photo-fair-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/photo-fair-mobile@1x.webp 1x,
+                        img/photo-fair-mobile@2x.webp 2x
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/photo-fair-desktop@1x.jpg 1x,
-                      img/photo-fair-desktop@2x.jpg 2x
-                    "
-                  />
-                  <source
-                    media="(min-width: 660px)"
-                    srcset="
-                      img/photo-fair-tablet@1x.jpg 1x,
-                      img/photo-fair-tablet@2x.jpg 2x
-                    "
-                  />
-                  <img
-                    class="page-photo__img"
-                    src="img/photo-fair-mobile@1x.jpg"
-                    srcset="
-                      img/photo-fair-mobile@1x.jpg 1x,
-                      img/photo-fair-mobile@2x.jpg 2x
-                    "
-                    alt="Фото Сергея"
-                  />
-                </picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo-fair-desktop@1x.jpg 1x,
+                        img/photo-fair-desktop@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 660px)"
+                      srcset="
+                        img/photo-fair-tablet@1x.jpg 1x,
+                        img/photo-fair-tablet@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="page-photo__img"
+                      src="img/photo-fair-mobile@1x.jpg"
+                      srcset="
+                        img/photo-fair-mobile@1x.jpg 1x,
+                        img/photo-fair-mobile@2x.jpg 2x
+                      "
+                      alt="Фото Сергея"
+                    />
+                  </picture>
+                </a>
 
                 <blockquote class="page-photo__wrap">
                   <cite class="page-photo__name">Сергей</cite>
@@ -501,55 +530,57 @@
             </li>
             <li class="page-photo__item">
               <article>
-                <picture>
-                  <source
-                    type="image/webp"
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/photo-pov-desktop@1x.webp 1x,
-                      img/photo-pov-desktop@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    media="(min-width: 660px)"
-                    srcset="
-                      img/photo-pov-tablet@1x.webp 1x,
-                      img/photo-pov-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    srcset="
-                      img/photo-pov-mobile@1x.webp 1x,
-                      img/photo-pov-mobile@2x.webp 2x
-                    "
-                  />
+                <a href="img/pov-full.jpg">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo-pov-desktop@1x.webp 1x,
+                        img/photo-pov-desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 660px)"
+                      srcset="
+                        img/photo-pov-tablet@1x.webp 1x,
+                        img/photo-pov-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/photo-pov-mobile@1x.webp 1x,
+                        img/photo-pov-mobile@2x.webp 2x
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/photo-pov-desktop@1x.jpg 1x,
-                      img/photo-pov-desktop@2x.jpg 2x
-                    "
-                  />
-                  <source
-                    media="(min-width: 660px)"
-                    srcset="
-                      img/photo-pov-tablet@1x.jpg 1x,
-                      img/photo-pov-tablet@2x.jpg 2x
-                    "
-                  />
-                  <img
-                    class="page-photo__img"
-                    src="img/photo-pov-mobile@1x.jpg"
-                    srcset="
-                      img/photo-pov-mobile@1x.jpg 1x,
-                      img/photo-pov-mobile@2x.jpg 2x
-                    "
-                    alt="Фото Максима"
-                  />
-                </picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo-pov-desktop@1x.jpg 1x,
+                        img/photo-pov-desktop@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 660px)"
+                      srcset="
+                        img/photo-pov-tablet@1x.jpg 1x,
+                        img/photo-pov-tablet@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="page-photo__img"
+                      src="img/photo-pov-mobile@1x.jpg"
+                      srcset="
+                        img/photo-pov-mobile@1x.jpg 1x,
+                        img/photo-pov-mobile@2x.jpg 2x
+                      "
+                      alt="Фото Максима"
+                    />
+                  </picture>
+                </a>
 
                 <blockquote class="page-photo__wrap">
                   <cite class="page-photo__name">Максим</cite>
@@ -563,55 +594,56 @@
             </li>
             <li class="page-photo__item">
               <article>
-                <picture>
-                  <source
-                    type="image/webp"
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/photo-wing-desktop@1x.webp 1x,
-                      img/photo-wing-desktop@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    media="(min-width: 660px)"
-                    srcset="
-                      img/photo-wing-tablet@1x.webp 1x,
-                      img/photo-wing-tablet@2x.webp 2x
-                    "
-                  />
-                  <source
-                    type="image/webp"
-                    srcset="
-                      img/photo-wing-mobile@1x.webp 1x,
-                      img/photo-wing-mobile@2x.webp 2x
-                    "
-                  />
+                <a href="img/wing-full.jpg">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo-wing-desktop@1x.webp 1x,
+                        img/photo-wing-desktop@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 660px)"
+                      srcset="
+                        img/photo-wing-tablet@1x.webp 1x,
+                        img/photo-wing-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/photo-wing-mobile@1x.webp 1x,
+                        img/photo-wing-mobile@2x.webp 2x
+                      "
+                    />
 
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      img/photo-wing-desktop@1x.jpg 1x,
-                      img/photo-wing-desktop@2x.jpg 2x
-                    "
-                  />
-                  <source
-                    media="(min-width: 660px)"
-                    srcset="
-                      img/photo-wing-tablet@1x.jpg 1x,
-                      img/photo-wing-tablet@2x.jpg 2x
-                    "
-                  />
-                  <img
-                    class="page-photo__img"
-                    src="img/photo-wing-mobile@1x.jpg"
-                    srcset="
-                      img/photo-wing-mobile@1x.jpg 1x,
-                      img/photo-wing-mobile@2x.jpg 2x
-                    "
-                    alt="Фото Надежды"
-                  />
-                </picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        img/photo-wing-desktop@1x.jpg 1x,
+                        img/photo-wing-desktop@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 660px)"
+                      srcset="
+                        img/photo-wing-tablet@1x.jpg 1x,
+                        img/photo-wing-tablet@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      class="page-photo__img"
+                      src="img/photo-wing-mobile@1x.jpg"
+                      srcset="
+                        img/photo-wing-mobile@1x.jpg 1x,
+                        img/photo-wing-mobile@2x.jpg 2x
+                      "
+                      alt="Фото Надежды"
+                    /> </picture
+                ></a>
 
                 <blockquote class="page-photo__wrap">
                   <cite class="page-photo__name">Надежда</cite>
@@ -683,20 +715,20 @@
           </picture>
           <div class="editor__icons">
             <a class="button editor__icons-btn button--active" href="#">
-              <svg class="button__crop" width="48px" height="48px">
-                <use xlink:href="img/sprite.svg#crop-icon"></use>
+              <svg class="button__crop" width="48" height="48">
+                <use xlink:href="#crop-icon"></use>
               </svg>
             </a>
 
             <a class="button editor__icons-btn" href="#">
-              <svg class="button__fill" width="48px" height="48px">
-                <use xlink:href="img/sprite.svg#fill-icon"></use>
+              <svg class="button__fill" width="48" height="48">
+                <use xlink:href="#fill-icon"></use>
               </svg>
             </a>
 
             <a class="button editor__icons-btn" href="#">
-              <svg class="button__contrast" width="31.92px" height="31.92px">
-                <use xlink:href="img/sprite.svg#contrast-icon"></use>
+              <svg class="button__contrast" width="31.92" height="31.92">
+                <use xlink:href="#contrast-icon"></use>
               </svg>
             </a>
           </div>
@@ -731,9 +763,28 @@
 
     <footer class="container page-footer">
       <a class="page-footer__logo" href="index.html">
+        <svg width="146" height="42">
+          <use
+            class="page-footer__logo-desktop"
+            xlink:href="#footer-logo-pink-blue-desktop"
+          ></use>
+          <use
+            class="page-footer__logo-mobile"
+            xlink:href="#footer-logo-pink-blue-mobile"
+          ></use>
+        </svg>
+        <!-- <embed type="image/svg+xml" src="img/sprite-footer-logo.svg" /> -->
         <!-- <img src="img/sprite-footer-logo.svg" /> -->
+        <!--
+        <svg>
+          <use xlink:href="#footer-logo-pink-blue"></use>
+        </svg> -->
+
         <!-- <svg>
-          <use xlink:href="img/sprite.svg#footer-logo-pink-blue"></use>
+
+          <use
+            xlink:href="img/sprite-footer-logo.svg#footer-logo-pink-blue"
+          ></use>
         </svg> -->
         <!-- <picture>
           <source
@@ -746,7 +797,7 @@
             alt="Приложение «PINK»"
           />
         </picture> -->
-        <svg width="146.3px" height="40.375px" viewBox="0 0 146.3 40.375">
+        <!-- <svg width="146.3" height="40.375" viewBox="0 0 146.3 40.375">
           <style>
             .logo-pink-blue-desktop {
               display: none;
@@ -836,30 +887,30 @@
               d="M60.462,28.016c-0.002-0.009-5.175-21.365-5.175-21.365C54.926,4.303,52.694,0,46.688,0 c-0.829,0-1.5,0.671-1.5,1.5s0.671,1.5,1.5,1.5c4.856,0,5.575,3.729,5.639,4.143l4.767,19.701h-2.073 c-0.742-5.927-5.802-10.531-11.927-10.531s-11.186,4.604-11.927,10.531h-1.82c-0.741-5.927-5.802-10.531-11.927-10.531 S6.235,20.917,5.493,26.844H3.42L8.187,7.143C8.25,6.729,8.97,3,13.826,3c0.829,0,1.5-0.671,1.5-1.5S14.655,0,13.826,0 C7.82,0,5.588,4.303,5.227,6.651c0,0-5.173,21.356-5.175,21.365c-0.266,1.109,0.531,1.826,1.426,1.826 c0.012,0,0.023,0.004,0.036,0.004h3.982c0.741,5.926,5.802,10.53,11.927,10.53s11.185-4.604,11.927-10.53h1.814 c0.742,5.926,5.802,10.53,11.927,10.53s11.186-4.604,11.927-10.53H59c0.012,0,0.023-0.004,0.036-0.004 C59.931,29.842,60.728,29.125,60.462,28.016z M26.315,29.844c-0.715,4.272-4.421,7.531-8.896,7.531s-8.18-3.259-8.896-7.531 c-0.082-0.488-0.135-0.988-0.135-1.5s0.053-1.011,0.135-1.5c0.715-4.271,4.421-7.531,8.896-7.531s8.18,3.26,8.896,7.531 c0.082,0.489,0.135,0.988,0.135,1.5S26.397,29.355,26.315,29.844z M51.99,29.844c-0.716,4.272-4.421,7.531-8.896,7.531 c-4.475,0-8.181-3.259-8.896-7.531c-0.082-0.488-0.135-0.988-0.135-1.5s0.053-1.011,0.135-1.5c0.716-4.271,4.421-7.531,8.896-7.531 c4.475,0,8.181,3.26,8.896,7.531c0.082,0.489,0.135,0.988,0.135,1.5S52.072,29.355,51.99,29.844z"
             />
           </g>
-        </svg>
+        </svg> -->
       </a>
       <ul class="social list">
         <li class="social__item">
           <a class="social__link social__link--twitter" href="#"
             ><span class="visually-hidden">Twitter</span>
-            <svg width="17.5px" height="14.663px">
-              <use xlink:href="img/sprite.svg#twitter-icon"></use>
+            <svg width="17.5" height="14.663">
+              <use xlink:href="#twitter-icon"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="#"
             ><span class="visually-hidden">Facebook</span>
-            <svg width="8.673px" height="18.944px">
-              <use xlink:href="img/sprite.svg#facebook-logo"></use>
+            <svg width="8.673" height="18.944">
+              <use xlink:href="#facebook-logo"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--youtube" href="#"
             ><span class="visually-hidden">Youtube</span>
-            <svg width="14.64px" height="13.96px">
-              <use xlink:href="img/sprite.svg#youtube-logo"></use>
+            <svg width="14.64" height="13.96">
+              <use xlink:href="#youtube-logo"></use>
             </svg>
           </a>
         </li>
@@ -870,8 +921,8 @@
           class="copyright__link"
           href="https://htmlacademy.ru/intensive/adaptive"
           ><span class="visually-hidden">HTML Academy</span>
-          <svg width="26.943px" height="34.09px">
-            <use xlink:href="img/sprite.svg#html-academy-logo"></use>
+          <svg width="26.943" height="34.09">
+            <use xlink:href="#html-academy-logo"></use>
           </svg>
         </a>
       </div>

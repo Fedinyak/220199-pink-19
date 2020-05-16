@@ -58,17 +58,45 @@
 }
 
 .page-header__logo svg {
-  fill: @white;
+  color: @white;
 }
 
 .page-header__logo:hover svg,
 .page-header__logo:focus svg {
-  fill: @pink;
+  color: @pink;
 }
 
 .page-header__logo:active svg {
-  fill: @white;
+  color: @white;
   opacity: 0.3;
+}
+
+.page-header__logo-mobile {
+  display: inline-block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__logo-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-header__logo-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
 }
 
 .main-nav {
