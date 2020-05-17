@@ -3,13 +3,14 @@
   text-align: center;
 }
 
-.page-form__intro--wrap {
+.page-form__intro {
   @media (min-width: @tablet-width) {
     padding-bottom: 93px;
   }
 }
 
-.page-form__text--hidden {
+.feedback__address-title,
+.intro__text--hidden {
   @media (max-width: @mobile-width-only) {
     display: none;
   }
@@ -136,7 +137,7 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .filter--color {
+  .filter__color {
     background-color: @bg-gray;
     margin-top: 0;
     padding-top: 0;
@@ -394,8 +395,26 @@
   }
 }
 
+fieldset > legend {
+  margin: 0 auto;
+}
+
+@media screen and (-moz-images-in-menus: 0) {
+  fieldset {
+    position: relative;
+  }
+
+  fieldset > legend {
+    position: absolute;
+    left: 50%;
+    top: -12px;
+    background: white;
+    transform: translate(-50%, 0);
+  }
+}
+
 @media (max-width: @mobile-width-only) {
-  .filter__title--bg {
+  .filter__bg {
     padding-left: calc(50vw - 160px);
     padding-right: calc(50vw - 160px);
     display: block;
@@ -460,6 +479,7 @@
 
 @media (min-width: @tablet-width) {
   .feedback__item {
+    position: relative;
     display: flex;
     flex-grow: 1;
     width: 100%;
@@ -492,8 +512,8 @@
   @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
-    top: 62px;
-    left: 494px;
+    top: 2px;
+    left: 437px;
     width: 62px;
     height: 59px;
     border-top-right-radius: 2px;
@@ -516,8 +536,8 @@
   @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
-    top: 194px;
-    left: 494px;
+    top: 134px;
+    left: 437px;
     width: 62px;
     height: 59px;
     border-top-right-radius: 2px;
@@ -526,6 +546,7 @@
     background-image: url("../img/icon-mail.svg");
     background-position: 20px center;
     background-repeat: no-repeat;
+    z-index: 1;
   }
 
   @media (min-width: @desktop-width) {

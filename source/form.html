@@ -7,6 +7,11 @@
     <meta name="format-detection" content="telephone=no" />
     <link rel="stylesheet" href="css/style.min.css" />
     <link rel="preload" href="/fonts/opensans.woff2" as="font" />
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <div style="display:none">
@@ -53,7 +58,7 @@
 
     <main>
       <section class="page-form">
-        <div class="page-form__intro--wrap intro--wrap container">
+        <div class="page-form__intro intro container">
           <h1 class="intro__title">
             Конкурс на самое безбашенное путешествие с Пинк
           </h1>
@@ -62,7 +67,7 @@
           <p class="intro__text">
             Поделитесь своей историей и получите шанс выиграть ценный приз —
             1000 миль на вашу бонусную карту!
-            <span class="page-form__text--hidden"
+            <span class="intro__text--hidden"
               >Пожалуйста, заполните форму ниже:</span
             >
           </p>
@@ -105,9 +110,9 @@
               </p>
             </div>
 
-            <fieldset class="filter filter__achievement-form filter--color">
-              <legend class="filter__title filter--color">
-                <span class="filter__title--bg">
+            <fieldset class="filter filter__achievement-form filter__color">
+              <legend class="filter__title filter__color">
+                <span class="filter__bg">
                   Ваши безбашенные достижения в путешествии
                 </span>
               </legend>
@@ -182,9 +187,7 @@
             </fieldset>
 
             <fieldset class="feedback__address-form filter">
-              <legend
-                class="feedback__address-title visually-hidden filter__title"
-              >
+              <legend class="feedback__address-title filter__title">
                 Контактная информация
               </legend>
               <div class="feedback__address-form-wrap">
@@ -213,8 +216,8 @@
               </div>
             </fieldset>
 
-            <fieldset class="filter filter__app-form filter--color">
-              <legend class="filter__title filter--color">
+            <fieldset class="filter filter__app-form filter__color">
+              <legend class="filter__title filter__color">
                 <span class="filter__title--bg">
                   С каким приложением путешествовали?
                 </span>

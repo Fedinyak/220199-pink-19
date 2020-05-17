@@ -15,16 +15,19 @@
   }
 }
 
+.page-header--nojs {
+  background-color: @dark-navy;
+
+  @media (min-width: @desktop-width) {
+    background-color: @border-shadow-dark;
+  }
+}
+
 .page-header-bg {
   background-color: @dark-navy;
   margin-top: -20px;
-  // margin-left: -20px;
-  //margin-right: -20px;
   padding-top: 20px;
-  // padding-left: 20px;
-  // padding-right: 20px;
   margin-bottom: -16px;
-  // width: 320px;
   margin-left: calc(140px - 50vw);
   margin-right: calc(140px - 50vw);
   padding-left: calc(50vw - 140px);
@@ -32,9 +35,7 @@
   width: 100vw;
 
   @media (min-width: @tablet-width) {
-    // width: 660px;
     margin-bottom: -37px;
-
     margin-left: calc(310px - 50vw);
     margin-right: calc(310px - 50vw);
     padding-left: calc(50vw - 310px);
@@ -193,6 +194,7 @@
   }
 
   .main-nav--nojs .main-nav__list {
+    background-color: @dark-navy;
     display: block;
   }
 }
