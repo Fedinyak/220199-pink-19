@@ -145,7 +145,6 @@
     margin-right: calc(140px - 50vw);
     padding-left: calc(50vw - 140px);
     padding-right: calc(50vw - 140px);
-    width: 100vw;
   }
 }
 
@@ -395,21 +394,27 @@
   }
 }
 
-fieldset > legend {
-  margin: 0 auto;
+.filter > legend {
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+  }
 }
 
 @media screen and (-moz-images-in-menus: 0) {
-  fieldset {
-    position: relative;
+  .filter {
+    @media (min-width: @tablet-width) {
+      position: relative;
+    }
   }
 
-  fieldset > legend {
-    position: absolute;
-    left: 50%;
-    top: -12px;
-    background: white;
-    transform: translate(-50%, 0);
+  .filter > legend {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      left: 50%;
+      top: -12px;
+      background: white;
+      transform: translate(-50%, 0);
+    }
   }
 }
 
@@ -583,7 +588,6 @@ fieldset > legend {
   @media (min-width: @tablet-width) {
     padding-bottom: 26px;
     margin-bottom: 50px;
-    display: flex;
     flex-grow: 1;
     width: 100%;
     order: -2;
