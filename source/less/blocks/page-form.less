@@ -29,7 +29,7 @@
   box-sizing: border-box;
   font-family: inherit;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 1;
 
   padding-top: 14px;
   padding-left: 20px;
@@ -37,6 +37,7 @@
   padding-bottom: 15px;
 
   width: 280px;
+  height: 63px;
 
   color: @dark-navy;
   border-radius: 4px;
@@ -518,7 +519,7 @@
     content: "";
     position: absolute;
     top: 2px;
-    left: 437px;
+    left: 422px;
     width: 62px;
     height: 59px;
     border-top-right-radius: 2px;
@@ -542,7 +543,7 @@
     content: "";
     position: absolute;
     top: 134px;
-    left: 437px;
+    left: 422px;
     width: 62px;
     height: 59px;
     border-top-right-radius: 2px;
@@ -632,6 +633,7 @@
 .appointment__item-text textarea {
   @media (min-width: @tablet-width) {
     min-height: 195px;
+    line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {
