@@ -514,18 +514,18 @@
   }
 }
 
-.icon-tel::after {
+.feedback__item--phone::after,
+.feedback__item--mail::after {
   @media (min-width: @tablet-width) {
     content: "";
     position: absolute;
     top: 2px;
-    left: 422px;
+    left: 437px;
     width: 62px;
     height: 59px;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     background-color: @disabled-gray;
-    background-image: url("../img/icon-phone.svg");
     background-position: 20px center;
     background-repeat: no-repeat;
   }
@@ -538,28 +538,15 @@
   }
 }
 
-.icon-mail::before {
+.feedback__item--phone::after {
   @media (min-width: @tablet-width) {
-    content: "";
-    position: absolute;
-    top: 134px;
-    left: 422px;
-    width: 62px;
-    height: 59px;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    background-color: @disabled-gray;
-    background-image: url("../img/icon-mail.svg");
-    background-position: 20px center;
-    background-repeat: no-repeat;
-    z-index: 1;
+    background-image: url("../img/icon-phone.svg");
   }
+}
 
-  @media (min-width: @desktop-width) {
-    top: 2px;
-    left: 759px;
-    width: 59px;
-    height: 59px;
+.feedback__item--mail::after {
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/icon-mail.svg");
   }
 }
 
@@ -631,14 +618,16 @@
 }
 
 .appointment__item-text textarea {
+  line-height: 30px;
+  min-height: 200px;
+
   @media (min-width: @tablet-width) {
-    min-height: 195px;
-    line-height: 30px;
+    min-height: 190px;
   }
 
   @media (min-width: @desktop-width) {
     margin-right: 0;
-    min-height: 80px;
+    min-height: 128px;
     margin-bottom: 10px;
   }
 }
