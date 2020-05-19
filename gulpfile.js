@@ -27,7 +27,8 @@ gulp.task("copy", function() {
         "source/fonts/**/*.{woff,woff2}",
         "source/img/sprite.svg",
         //"source/js/**",
-        "source/*.ico"
+        "source/*.ico",
+        "source/css/style.css"
       ],
       {
         base: "source"

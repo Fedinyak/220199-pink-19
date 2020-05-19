@@ -1,4 +1,4 @@
-.download-wrap {
+.download {
   margin-top: -66px;
   padding-top: 40px;
   padding-bottom: 16px;
@@ -47,7 +47,7 @@
   }
 }
 
-.download {
+.download__wrap {
   position: relative;
   margin-top: 0;
   color: @white;
@@ -79,6 +79,34 @@
     line-height: 60px;
     padding-bottom: 22px;
   }
+}
+
+.download__button {
+  display: block;
+  font-size: 18px;
+
+  padding-top: 16px;
+  padding-bottom: 18px;
+
+  color: @white;
+  background-color: @transparent;
+  border: 2px solid @white;
+  border-radius: 60px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+  }
+}
+
+.download__button:focus,
+.download__button:not(:disabled):hover {
+  color: @pink;
+  background-color: @white;
+}
+
+.download__button:not(:disabled):active {
+  color: @pink-opacity;
+  background-color: @white;
 }
 
 .download__platform-list {

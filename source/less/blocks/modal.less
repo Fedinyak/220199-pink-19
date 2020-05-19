@@ -113,3 +113,40 @@
 .modal__accept-visible {
   display: block;
 }
+
+.modal__button {
+  text-transform: uppercase;
+  width: 280px;
+  height: 63px;
+  font-size: 18px;
+  color: @white;
+  border: none;
+  background-color: @bright-green;
+  border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+}
+
+.modal__accept .modal__button {
+  @media (min-width: @desktop-width) {
+    width: 460px;
+    margin-left: 0;
+  }
+}
+
+.modal__button:not(:disabled):focus,
+.modal__button:not(:disabled):hover {
+  background-color: @dark-green;
+}
+
+.modal__button:not(:disabled):active {
+  background-color: @dark-green;
+  color: @white-opacity;
+}
+
+.modal__button:disabled {
+  background-color: @disabled-gray;
+  cursor: default;
+}
