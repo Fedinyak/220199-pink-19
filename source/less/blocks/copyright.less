@@ -1,0 +1,36 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 13px;
+    width: 170px;
+    justify-content: flex-end;
+  }
+}
+
+.copyright__text {
+  color: @dark-navy;
+  font-size: 14px;
+  font-weight: 500;
+  padding-right: 15px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.copyright__link svg {
+  display: block;
+  fill: @pink;
+}
+
+.copyright__link:hover svg,
+.copyright__link:focus svg {
+  fill: @dark-navy;
+}
+
+.copyright__link:active svg {
+  opacity: 0.3;
+}

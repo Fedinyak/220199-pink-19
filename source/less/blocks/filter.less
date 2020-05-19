@@ -21,6 +21,7 @@
 
 .filter__achievement-form {
   margin-top: 25px;
+  padding-bottom: 30px;
 
   @media (min-width: @tablet-width) {
     width: 100%;
@@ -34,9 +35,13 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .filter__achievement {
+.filter__achievement {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
     background-color: @transparent;
+    flex-direction: row;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -45,7 +50,7 @@
 
 .filter__option {
   margin-top: 21px;
-  margin-bottom: 40px;
+  margin-bottom: 19px;
   padding-left: 50px;
   font-size: 18px;
   line-height: 30px;
@@ -74,8 +79,7 @@
   }
 }
 
-.filter__achievement-form .filter__option:nth-child(5),
-.filter__achievement-form .filter__option:nth-child(6) {
+.filter__achievement-form .filter__option:nth-child(3n) {
   @media (min-width: @desktop-width) {
     width: 180px;
     padding-right: 0;
@@ -112,39 +116,42 @@
   padding-left: 20px;
   cursor: pointer;
   user-select: none;
+
+  @media (min-width: @desktop-width) {
+  }
 }
 
-@media (min-width: @desktop-width) {
+@media (max-width: @mobile-tablet-width-only) {
   .filter__option:first-child {
     order: 1;
   }
 }
 
-@media (min-width: @desktop-width) {
+@media (max-width: @mobile-tablet-width-only) {
   .filter__option:nth-child(2) {
-    order: 4;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .filter__option:nth-child(3) {
-    order: 2;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .filter__option:nth-child(4) {
-    order: 5;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .filter__option:nth-child(5) {
     order: 3;
   }
 }
 
-@media (min-width: @desktop-width) {
+@media (max-width: @mobile-tablet-width-only) {
+  .filter__option:nth-child(3) {
+    order: 5;
+  }
+}
+
+@media (max-width: @mobile-tablet-width-only) {
+  .filter__option:nth-child(4) {
+    order: 2;
+  }
+}
+
+@media (max-width: @mobile-tablet-width-only) {
+  .filter__option:nth-child(5) {
+    order: 4;
+  }
+}
+
+@media (max-width: @mobile-tablet-width-only) {
   .filter__option:nth-child(6) {
     order: 6;
   }

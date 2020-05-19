@@ -1,0 +1,83 @@
+.icons-controls {
+  width: 90px;
+  display: block;
+  opacity: 0.3;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    height: 72px;
+    fill: @pink;
+    opacity: 1;
+    margin-right: 0;
+    margin-left: 20px;
+
+    padding-top: 25px;
+    padding-right: 0;
+    padding-bottom: 25px;
+    border-bottom: 1px solid @disabled-gray;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 130px;
+    width: 42px;
+  }
+}
+
+.icons-controls__crop {
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 46px;
+    height: 46px;
+    margin-top: -11px;
+    margin-left: -3px;
+  }
+}
+
+.icons-controls__fill {
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 52px;
+    height: 47px;
+    margin-top: -11px;
+    margin-left: -4px;
+  }
+}
+
+.icons-controls__contrast {
+  @media (min-width: @tablet-width) {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 32px;
+    height: 32px;
+    margin-top: -6px;
+    margin-left: -2px;
+  }
+}
+
+.icons-controls:focus,
+.icons-controls:hover {
+  @media (max-width: @mobile-width-only) {
+    opacity: 0.5;
+  }
+}
+
+.icons-controls--active,
+.icons-controls--active:focus,
+.icons-controls--active:hover {
+  @media (max-width: @mobile-width-only) {
+    fill: @pink;
+    opacity: 1;
+  }
+}

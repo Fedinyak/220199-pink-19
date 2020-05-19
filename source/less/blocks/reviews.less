@@ -37,48 +37,6 @@
   position: relative;
 }
 
-.reviews__list-arrows-back,
-.reviews__list-arrows-next {
-  @media (min-width: @desktop-width) {
-    position: absolute;
-    display: block;
-    top: -161px;
-    width: 30px;
-    height: 30px;
-    background-color: @transparent;
-    border-left: 2px solid @black;
-    border-bottom: 2px solid @black;
-    opacity: 0.3;
-    cursor: pointer;
-  }
-}
-
-.reviews__list-arrows-back {
-  @media (min-width: @desktop-width) {
-    left: 5px;
-    transform: rotate(45deg);
-  }
-}
-
-.reviews__list-arrows-next {
-  @media (min-width: @desktop-width) {
-    left: 903px;
-    transform: rotate(225deg);
-  }
-}
-
-.reviews__list-arrows-back:hover,
-.reviews__list-arrows-back:focus,
-.reviews__list-arrows-next:hover,
-.reviews__list-arrows-next:focus {
-  opacity: 0.6;
-}
-
-.reviews__list-arrows-back:active,
-.reviews__list-arrows-next:active {
-  opacity: 0.1;
-}
-
 .reviews__item {
   display: none;
 }
@@ -141,7 +99,7 @@
   }
 }
 
-.reviews-controls {
+.reviews__controls {
   margin-top: 3px;
   text-align: center;
 
@@ -154,7 +112,7 @@
   }
 }
 
-.reviews-controls label {
+.reviews__controls label {
   display: inline-block;
   width: 6px;
   height: 6px;
@@ -172,24 +130,24 @@
   }
 }
 
-.reviews-controls:hover label,
-.reviews-controls:focus label {
+.reviews__controls:hover label,
+.reviews__controls:focus label {
   opacity: 0.6;
 }
 
-.reviews-controls:active label {
+.reviews__controls:active label {
   opacity: 0.1;
 }
 
-.reviews-1-radio:checked ~ .reviews__list .reviews__item-1,
-.reviews-2-radio:checked ~ .reviews__list .reviews__item-2,
-.reviews-3-radio:checked ~ .reviews__list .reviews__item-3 {
+.reviews__1-radio:checked ~ .reviews__list .reviews__item-1,
+.reviews__2-radio:checked ~ .reviews__list .reviews__item-2,
+.reviews__3-radio:checked ~ .reviews__list .reviews__item-3 {
   display: block;
 }
 
-.reviews-1-radio:checked ~ .reviews-controls label[for="reviews-1"],
-.reviews-2-radio:checked ~ .reviews-controls label[for="reviews-2"],
-.reviews-3-radio:checked ~ .reviews-controls label[for="reviews-3"] {
+.reviews__1-radio:checked ~ .reviews__controls label[for="reviews__1"],
+.reviews__2-radio:checked ~ .reviews__controls label[for="reviews__2"],
+.reviews__3-radio:checked ~ .reviews__controls label[for="reviews__3"] {
   position: relative;
   bottom: -3px;
   width: 12px;

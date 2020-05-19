@@ -71,7 +71,7 @@
         </div>
         <div class="container">
           <ul class="page-photo__list list">
-            <li class="page-photo__item page-photo__item-daily">
+            <li class="page-photo__item page-photo__item--daily">
               <article>
                 <a href="img/panorama-full.jpg">
                   <picture>
@@ -116,7 +116,7 @@
                     />
                     <!--[if IE 9]></video><![endif]-->
                     <img
-                      class="page-photo__img-daily"
+                      class="page-photo__img--daily"
                       src="img/panorama-mobile@1x.jpg"
                       srcset="
                         img/panorama-mobile@1x.jpg 1x,
@@ -135,7 +135,7 @@
                     смотрите прямую трансляцию в перископе, задавайте свои
                     вопросы!
                   </p>
-                  <a class="page-photo__like-daily" href="#">Нравится: 215</a>
+                  <a class="page-photo__like--daily" href="#">Нравится: 215</a>
                 </blockquote>
               </article>
             </li>
@@ -596,37 +596,47 @@
               alt="Фото зимней дороги"
             />
           </picture>
-          <div class="editor__icons">
-            <a class="button editor__icons-btn button--active" href="#">
-              <svg class="button__crop" width="48" height="48">
+          <div class="editor__icons-controls">
+            <a class="button icons-controls icons-controls--active" href="#">
+              <svg class="icons-controls__crop" width="48" height="48">
                 <use xlink:href="#crop-icon"></use>
               </svg>
             </a>
 
-            <a class="button editor__icons-btn" href="#">
-              <svg class="button__fill" width="48" height="48">
+            <a class="button icons-controls" href="#">
+              <svg class="icons-controls__fill" width="48" height="48">
                 <use xlink:href="#fill-icon"></use>
               </svg>
             </a>
 
-            <a class="button editor__icons-btn" href="#">
-              <svg class="button__contrast" width="31.92" height="31.92">
+            <a class="button icons-controls" href="#">
+              <svg
+                class="icons-controls__contrast"
+                width="31.92"
+                height="31.92"
+              >
                 <use xlink:href="#contrast-icon"></use>
               </svg>
             </a>
           </div>
           <div class="editor__controls">
-            <div class="editor__controls-bar editor__controls-bar-active">
+            <div class="editor__controls-bar editor__controls-bar--active">
               <div class="controls-bar"></div>
-              <div class="fill-toggle fill-toggle-crop"></div>
+              <div
+                class="controls-bar__toggle controls-bar__toggle--crop"
+              ></div>
             </div>
             <div class="editor__controls-bar">
               <div class="controls-bar"></div>
-              <div class="fill-toggle fill-toggle-fill"></div>
+              <div
+                class="controls-bar__toggle controls-bar__toggle--fill"
+              ></div>
             </div>
             <div class="editor__controls-bar">
               <div class="controls-bar"></div>
-              <div class="fill-toggle fill-toggle-contrast"></div>
+              <div
+                class="controls-bar__toggle controls-bar__toggle--contrast"
+              ></div>
             </div>
           </div>
           <div class="editor__button-wrap">

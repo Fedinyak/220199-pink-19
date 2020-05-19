@@ -7,7 +7,7 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 37px;
+    padding-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
@@ -23,7 +23,7 @@
   }
 }
 
-.page-header-bg {
+.page-header--bg {
   background-color: @dark-navy;
   margin-top: -20px;
   padding-top: 20px;
@@ -32,10 +32,9 @@
   margin-right: calc(140px - 50vw);
   padding-left: calc(50vw - 140px);
   padding-right: calc(50vw - 140px);
-  width: 100vw;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: -37px;
+    margin-bottom: -54px;
     margin-left: calc(310px - 50vw);
     margin-right: calc(310px - 50vw);
     padding-left: calc(50vw - 310px);
@@ -97,190 +96,5 @@
 
   @media (min-width: @desktop-width) {
     display: inline-block;
-  }
-}
-
-.main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-@media (max-width: @mobile-tablet-width-only) {
-  .main-nav__toggle {
-    position: relative;
-    width: 50px;
-    height: 30px;
-    top: 14px;
-    border: none;
-    background-color: @transparent;
-
-    cursor: pointer;
-  }
-
-  .main-nav--closed .main-nav__toggle::before {
-    content: "";
-
-    position: absolute;
-    top: -4px;
-    right: 0;
-
-    width: 50px;
-    height: 4px;
-
-    background-color: @white;
-    box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
-
-    @media (min-width: @tablet-width) {
-      top: 13px;
-    }
-  }
-
-  .main-nav__toggle-wrap:focus .main-nav__toggle::before {
-    background-color: @pink;
-    box-shadow: 0 10px 0 0 @pink, 0 20px 0 0 @pink;
-  }
-
-  .main-nav--closed:hover .main-nav__toggle::before,
-  .main-nav--closed:focus .main-nav__toggle::before {
-    background-color: @pink;
-    box-shadow: 0 10px 0 0 @pink, 0 20px 0 0 @pink;
-  }
-
-  .main-nav--closed:active .main-nav__toggle::before {
-    background-color: @pink-opacity;
-    box-shadow: 0 10px 0 0 @pink-opacity, 0 20px 0 0 @pink-opacity;
-  }
-
-  .main-nav--opened .main-nav__toggle::before,
-  .main-nav--opened .main-nav__toggle::after {
-    content: "";
-
-    position: absolute;
-    top: 4px;
-    right: -4px;
-
-    width: 30px;
-    height: 5px;
-
-    background-color: @white;
-
-    @media (min-width: @tablet-width) {
-      top: 23px;
-    }
-  }
-
-  .main-nav--opened .main-nav__toggle::before {
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
-
-  .main-nav--opened .main-nav__toggle::after {
-    transform: rotate(-45deg);
-    box-shadow: none;
-  }
-
-  .main-nav__toggle-wrap:focus .main-nav__toggle::before,
-  .main-nav__toggle-wrap:focus .main-nav__toggle::after {
-    background-color: @pink;
-    box-shadow: none;
-  }
-
-  .main-nav--opened .main-nav__toggle:active::after,
-  .main-nav--opened .main-nav__toggle:active::before {
-    background-color: @pink-dark;
-  }
-
-  .main-nav--closed .main-nav__list {
-    display: none;
-  }
-
-  .main-nav--nojs .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav--nojs .main-nav__list {
-    background-color: @dark-navy;
-    display: block;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav__toggle {
-    display: none;
-  }
-}
-
-.main-nav__list {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  letter-spacing: 1.3px;
-  margin-top: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 18px;
-  }
-
-  @media (min-width: @desktop-width) {
-    flex-grow: 0;
-    flex-direction: row;
-    margin-top: 0;
-    padding-top: 5px;
-    text-transform: none;
-    font-weight: 500;
-  }
-}
-
-.site-list__item {
-  text-align: center;
-  width: 320px;
-  margin-left: -20px;
-  border-top: 1px solid @border-shadow-light;
-  border-bottom: 1px solid @border-shadow-dark;
-
-  @media (min-width: @tablet-width) {
-    width: 660px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 78px;
-    border-top: none;
-    border-bottom: none;
-    width: auto;
-  }
-}
-
-.site-list__item a {
-  color: @white;
-  display: block;
-  padding-top: 20px;
-  padding-bottom: 18px;
-}
-
-.site-list__item:not(.site-list__item--active) a:hover,
-.site-list__item:not(.site-list__item--active) a:focus {
-  color: @pink;
-}
-
-.site-list__item:not(.site-list__item--active) a:active {
-  color: @white-opacity;
-}
-
-.site-list__item--active {
-  position: relative;
-}
-
-.site-list__item--active::after {
-  @media (min-width: @desktop-width) {
-    content: "";
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 7px;
-    height: 2px;
-    background-color: @white;
   }
 }
