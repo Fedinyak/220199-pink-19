@@ -65,6 +65,7 @@
 
     @media (min-width: @tablet-width) {
       top: 23px;
+      right: -4px;
     }
   }
 
@@ -78,8 +79,10 @@
     box-shadow: none;
   }
 
-  .main-nav__toggle-wrap:focus .main-nav__toggle::before,
-  .main-nav__toggle-wrap:focus .main-nav__toggle::after {
+  .main-nav--opened:hover .main-nav__toggle::before,
+  .main-nav--opened:hover .main-nav__toggle::after,
+  .main-nav--opened:focus .main-nav__toggle::before,
+  .main-nav--opened:focus .main-nav__toggle::after {
     background-color: @pink;
     box-shadow: none;
   }
@@ -119,7 +122,7 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding-top: 18px;
+    padding-top: 36px;
   }
 
   @media (min-width: @desktop-width) {
