@@ -1,32 +1,54 @@
-// var navMain = document.querySelector(".main-nav");
-// var navToggle = document.querySelector(".main-nav__toggle");
-// var header = document.querySelector(".page-header");
-
+var crop = document.querySelector(".icons-controls__crop");
+var barCrop = document.querySelector(".controls-bar__toggle--crop");
 var fill = document.querySelector(".icons-controls__fill");
 var barFill = document.querySelector(".controls-bar__toggle--fill");
-var active = document.querySelector(".icons-controls--active");
+var contrast = document.querySelector(".icons-controls__contrast");
+var barContrast = document.querySelector(".controls-bar__toggle--contrast");
 
-barFill.addEventListener("mousedown", function() {
-  fill.classList.add("active");
+barCrop.addEventListener("mouseover", function() {
+  crop.classList.add("hover");
 });
 
-// barFill.addEventListener(
-//   "mouseup",
-//   fill.classList.remove("icons-controls--active")
-// );
+barCrop.addEventListener("mouseleave", function() {
+  crop.classList.remove("hover");
+});
 
-/*
-navMain.classList.remove("main-nav--nojs");
-header.classList.remove("page-header--nojs");
+barCrop.addEventListener("mousedown", function() {
+  crop.classList.add("down");
+});
 
-navToggle.addEventListener("click", function() {
-  if (navMain.classList.contains("main-nav--closed")) {
-    navMain.classList.remove("main-nav--closed");
-    navMain.classList.add("main-nav--opened");
-    navMain.classList.add("page-header--bg");
-  } else {
-    navMain.classList.add("main-nav--closed");
-    navMain.classList.remove("main-nav--opened");
-    navMain.classList.remove("page-header--bg");
-  }
-});*/
+barCrop.addEventListener("mouseup", function() {
+  crop.classList.remove("down");
+});
+
+barContrast.addEventListener("mouseover", function() {
+  contrast.classList.add("hover");
+});
+
+barContrast.addEventListener("mouseleave", function() {
+  contrast.classList.remove("hover");
+});
+
+barContrast.addEventListener("mousedown", function() {
+  contrast.classList.add("down");
+});
+
+barContrast.addEventListener("mouseup", function() {
+  contrast.classList.remove("down");
+});
+
+barFill.addEventListener("mouseover", function() {
+  fill.classList.add("hover");
+});
+
+barFill.addEventListener("mouseleave", function() {
+  fill.classList.remove("hover");
+});
+
+barFill.addEventListener("mousedown", function() {
+  fill.classList.add("down");
+});
+
+barFill.addEventListener("mouseup", function() {
+  fill.classList.remove("down");
+});

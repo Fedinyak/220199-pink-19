@@ -1,13 +1,12 @@
 .icons-controls {
   width: 90px;
   display: block;
-  opacity: 0.3;
+  fill: @border-shadow-dark;
   padding: 0;
 
   @media (min-width: @tablet-width) {
     width: 30px;
     height: 72px;
-    opacity: 0.3;
     margin-right: 0;
     margin-left: 20px;
 
@@ -20,6 +19,14 @@
   @media (min-width: @desktop-width) {
     margin-left: 130px;
     width: 42px;
+  }
+
+  svg.hover {
+    fill: @border-shadow-darker;
+  }
+
+  svg.down {
+    fill: @pink;
   }
 }
 
@@ -65,21 +72,8 @@
   }
 }
 
-.icons-controls:focus,
-.icons-controls:hover {
+.icons-controls--active {
   @media (max-width: @mobile-width-only) {
-    opacity: 0.5;
+    fill: @pink;
   }
-}
-
-.icons-controls--active,
-.icons-controls--active:focus,
-.icons-controls--active:hover {
-  fill: @pink;
-  opacity: 1;
-
-  // @media (max-width: @mobile-width-only) {
-  //   fill: @pink;
-  //   opacity: 1;
-  // }
 }
