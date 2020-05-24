@@ -11,6 +11,7 @@ barCrop.addEventListener("mouseover", function() {
 
 barCrop.addEventListener("mouseleave", function() {
   crop.classList.remove("hover");
+  crop.classList.remove("down");
 });
 
 barCrop.addEventListener("mousedown", function() {
@@ -27,6 +28,7 @@ barContrast.addEventListener("mouseover", function() {
 
 barContrast.addEventListener("mouseleave", function() {
   contrast.classList.remove("hover");
+  contrast.classList.remove("down");
 });
 
 barContrast.addEventListener("mousedown", function() {
@@ -43,6 +45,7 @@ barFill.addEventListener("mouseover", function() {
 
 barFill.addEventListener("mouseleave", function() {
   fill.classList.remove("hover");
+  fill.classList.remove("down");
 });
 
 barFill.addEventListener("mousedown", function() {
